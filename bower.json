@@ -1,0 +1,6 @@
+{
+  "name": "guake-website",
+  "dependencies": {
+    "bootstrap": "~3.1.0"
+  }
+}
