@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+    - "0.10"
+install:
+    - time npm install -g grunt-cli
+env:
+    global:
+        - JEKYLL_VERSION: 1.4.1
+        - SAUCE_USERNAME: bootstrap
+script:
+    - grunt --verbose --force

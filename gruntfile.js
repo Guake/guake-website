@@ -96,16 +96,24 @@ module.exports = function(grunt) {
           tasks: ['phpunit']
         }
       }
-    });
+    }
+    );
 
-  // Plugin loading
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-phpunit');
+    // Plugin loading
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-phpunit');
 
-  // Task definition
-  grunt.registerTask('default', ['watch']);
+    // Register tasks
+    grunt.registerTask('default', [
+        'uglify',
+        'less',
+        'concat'
+    ]);
+
+    // Task definition
+    grunt.registerTask('dev', ['watch']);
 
 };
