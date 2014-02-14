@@ -1,6 +1,12 @@
 {
-  "name": "guake-website",
-  "dependencies": {
-    "bootstrap": "~3.1.0"
-  }
+    "name": "guake-terminal",
+    "version": "0.0.0",
+    "dependencies": {
+        "angular": "~1.0.7",
+        "bootstrap": "~3.0.1"
+    },
+    "devDependencies": {
+        "angular-mocks": "~1.0.7",
+        "angular-scenario": "~1.0.7"
+    }
 }

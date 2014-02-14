@@ -1,119 +1,114 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-  //Initializing the configuration object
     grunt.initConfig({
-
-      // Task configuration
-    less: {
-        development: {
-            options: {
-              compress: true,  //minifying the result
-            },
-            files: {
-              //compiling frontend.less into frontend.css
-              "./public/assets/stylesheets/frontend.css":"./app/assets/stylesheets/frontend.less",
-              //compiling backend.less into backend.css
-              "./public/assets/stylesheets/backend.css":"./app/assets/stylesheets/backend.less"
+        jablConfig: grunt.file.readJSON('jabl.json'),
+        jade: {
+            compile: {
+                options: {
+                    data: {
+                        debug: false
+                    }
+                },
+                files: [
+                    {
+                        expand: true,     // Enable dynamic expansion.
+                        cwd: 'src/jade/public',      // Src matches are relative to this path.
+                        src: ['**/*.jade'], // Actual pattern(s) to match.
+                        dest: 'public/',   // Destination path prefix.
+                        ext: '.html'    // Dest filepaths will have this extension.
+                    }
+                ]
             }
-        }
-    },
-    concat: {
-      options: {
-        separator: ';',
-      },
-      js_frontend: {
-        src: [
-          './bower_components/jquery/jquery.js',
-          './bower_components/bootstrap/dist/js/bootstrap.js',
-          './app/assets/javascript/frontend.js'
-        ],
-        dest: './public/assets/javascript/frontend.js',
-      },
-      js_backend: {
-        src: [
-          './bower_components/jquery/jquery.js',
-          './bower_components/bootstrap/dist/js/bootstrap.js',
-          './app/assets/javascript/backend.js'
-        ],
-        dest: './public/assets/javascript/backend.js',
-      },
-    },
-    uglify: {
-      options: {
-        mangle: false  // Use if you want the names of your functions and variables unchanged
-      },
-      frontend: {
-        files: {
-          './public/assets/javascript/frontend.js': './public/assets/javascript/frontend.js',
-        }
-      },
-      backend: {
-        files: {
-          './public/assets/javascript/backend.js': './public/assets/javascript/backend.js',
-        }
-      },
-    },
-    phpunit: {
-        classes: {
         },
-        options: {
-        }
-    },
-    watch: {
-        js_frontend: {
-          files: [
-            //watched files
-            './bower_components/jquery/jquery.js',
-            './bower_components/bootstrap/dist/js/bootstrap.js',
-            './app/assets/javascript/frontend.js'
-            ],
-          tasks: ['concat:js_frontend','uglify:frontend'],     //tasks to run
-          options: {
-            livereload: true                        //reloads the browser
-          }
+        concat: {
+            options: {
+                separator: ''
+            },
+            angular: {
+                src: [
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.prefix',
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.js',
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/controllers/**/*.js',
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/directives/**/*.js',
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/filters/**/*.js',
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/services/**/*.js',
+                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.suffix'
+                ],
+                dest: 'public/js/<%= jablConfig.appTitle.camelized %>.js'
+            }
         },
-        js_backend: {
-          files: [
-            //watched files
-            './bower_components/jquery/jquery.js',
-            './bower_components/bootstrap/dist/js/bootstrap.js',
-            './app/assets/javascript/backend.js'
-          ],
-          tasks: ['concat:js_backend','uglify:backend'],     //tasks to run
-          options: {
-            livereload: true                        //reloads the browser
-          }
+        uglify: {
+            options: {
+                banner: '/*! <%= jablConfig.appTitle.original %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            },
+            jid: {
+                files: {
+                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['<%= concat.angular.dest %>']
+                }
+            }
+        },
+        jshint: {
+            beforeConcat: {
+                src: ['gruntfile.js', 'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/**/*.js']
+            },
+            afterConcat: {
+                src: [
+                    '<%= concat.angular.dest %>'
+                ]
+            },
+            options: {
+                // options here to override JSHint defaults
+                globals: {
+                    jQuery: true,
+                    console: true,
+                    module: true,
+                    document: true,
+                    angular: true
+                },
+                globalstrict: false
+            }
         },
         less: {
-          files: ['./app/assets/stylesheets/*.less'],  //watched files
-          tasks: ['less'],                          //tasks to run
-          options: {
-            livereload: true                        //reloads the browser
-          }
+            jid: {
+                files: {
+                    "public/css/<%= jablConfig.appTitle.camelized %>.css": "src/less/<%= jablConfig.appTitle.camelized %>.less"
+                }
+            }
         },
-        tests: {
-          files: ['app/controllers/*.php','app/models/*.php'],  //the task will run only when you save files in this location
-          tasks: ['phpunit']
+        connect: {
+            server:{
+                options: {
+                    port: 9000,
+                    base: 'public',
+                    hostname: 'localhost',
+                    keepalive: true,
+                    livereload: true
+                }
+            }
+        },
+        watch: {
+            options: {
+                livereload: true
+            },
+            files: [
+                'Gruntfile.js',
+                'src/**/*'
+            ],
+            tasks: ['default']
         }
-      }
-    }
-    );
+    });
 
-    // Plugin loading
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-phpunit');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
-    // Register tasks
-    grunt.registerTask('default', [
-        'uglify',
-        'less',
-        'concat'
-    ]);
-
-    // Task definition
-    grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('default', ['jade', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+    grunt.registerTask('build', ['default']);
+    grunt.registerTask('serve', ['connect']);
+    grunt.registerTask('livereload', ['default', 'watch']);
 
 };
