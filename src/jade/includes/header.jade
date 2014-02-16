@@ -1,2 +1,25 @@
 header
-    h1 Guake Terminal
+
+nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
+    .container
+        .navbar-header.page-scroll
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+                i.fa.fa-bars
+            a.navbar-brand(href='#page-top')
+                i.fa.fa-play-circle
+                span.light Guake
+                | Terminal
+        .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+            ul.nav.navbar-nav
+                li.hidden.active
+                    a(href='#page-top') Home
+                li.page-scroll
+                    a(href='#info') Info
+                li.page-scroll
+                    a(href='#screenshots') Screenshots
+                li.page-scroll
+                    a(href='#download') Downloads
+                li.page-scroll
+                    a(href='#sources') Source code
+                li.page-scroll
+                    a(href='#faq') FAQ

@@ -15,7 +15,7 @@ module.exports = function(config) {
         files: [
             'public/bower/angular/angular.js',
             'public/bower/angular-mocks/angular-mocks.js',
-            'public/js/guakeTerminal.js',
+            'public/js/guake.js',
             'src/js/test/unit/**/*.js'
         ],
 

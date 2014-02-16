@@ -2,11 +2,107 @@ extends ../layouts/default.jade
 
 block content
 
-    p Welcome to the guake terminal website !
+    section.intro
+    .intro-body
+        .container
+            .row
+                .col-md-8.col-md-offset-2
+                    h1.brand-heading Guake Terminal
+                    p.intro-text
+                        An advanced but simple top-down terminal for the GNOME desktop
+                    .page-scroll
+                        a.btn.btn-circle(href='#info')
+                            i.fa.fa-angle-double-down.animated
 
-    p You can see live what is going on directly!
+    section#info.content-section.text-center
+    .row
+        .col-lg-8.col-lg-offset-2
+            h1 What is Guake?
 
-    p But it is not really live, a bit differed. Sometimes it works sometimes not
+            p Guake is a top-down terminal for Gnome (in the style of Yakuake for KDE, Tilda or the terminal used
+                in Quake).
 
-    button(type="button").btn.btn-default Button name!!!!
+            p You can check the screenshots to get a small feeling about it.
 
+            h1 How to get it?
+
+            p Guake is packaged by a large number of distributions, among which are Fedora, Debian, Ubuntu or ArchLinux,
+                so please check your repo. Source tarballs are available; see the Downloads page.
+
+            h1 Reporting bugs
+
+            p Oh the bugs. Report 'em all! To file a bug report, use this link. Though you have to register and
+                login first.
+
+            h1 Hacking
+
+            p If you starve to add a feature to Guake, head to the GoingFurther page. Some knowledge of Python, git
+                and GTK is all what you need.
+
+            h1 Frequently Asked questions
+
+            p You can also find some notes on the Frequently Asked Questions page. In case of troubles,  drop us a letter.
+
+    section#screenshots.content-section.text-center
+    .row
+        .col-lg-8.col-lg-offset-2
+            h1 Screenshots
+
+    section#download.content-section.text-center
+        .download-section
+            .container
+                .col-lg-8.col-lg-offset-2
+                    h1 Distribution Package
+                    p
+                        | Guake is already available on different Linux distributions. Here are the typical commands
+                        | to use in order to install Guake on your system.
+
+                    h2 Fedora
+                    p yum install guake
+
+                    h2 Debian/Ubuntu
+                    p apt-get install guake
+
+                    h2 Gentoo
+                    p emerge -av guake
+
+
+    section#sources.content-section.text-center
+        .download-section
+            .container
+                .col-lg-8.col-lg-offset-2
+                    h1 Compile Guake from sources
+                    p
+                        | General information on how to compile guake can be found in the
+                        a(href="https://github.com/Guake/guake/blob/master/INSTALL") INSTALL
+                        | file.
+
+                    ul.list-inline.banner-social-buttons
+                        li
+                            a.btn.btn-default.btn-lg(href='https://github.com/Guake/guake/')
+                                i.fa.fa-github.fa-fw
+                                span.network-name
+                                    | Visit the Github project page
+
+    section#faq.content-section.text-center
+    .row
+        .col-lg-8.col-lg-offset-2
+            h1 Problem with gconf schema?
+
+            p (Extraced from the README)
+            p If you receive a message asking you if you have installed guake.schemas properly when launching guake, the first question is:
+            p Did you install it ?
+
+            p If no then you might want to do so. You can install the gconf schemas file by hand doing the following:
+
+            p # gconftool-2 --makefile-install-rule data/guake.schemas
+
+            p For more install details, please read the INSTALL file.
+
+            p If the problem persists, it means that your default sysconfdir is different from the one choosen by autotools. To fix that, you probably have to append the param `--sysconfdir=/etc' to your `./configure' call, like this:
+
+            p $ ./configure --sysconfidir=/etc
+
+            p Then you can restart the compilation as before
+
+            p $ make
