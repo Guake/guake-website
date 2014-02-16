@@ -19,3 +19,5 @@ public/bower/
 
 # Node modules
 node_modules
+public/
+bower_components/
