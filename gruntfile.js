@@ -95,6 +95,23 @@ module.exports = function (grunt) {
                 'src/**/*'
             ],
             tasks: ['default']
+        },
+        copy: {
+          main: {
+            files: [
+              // includes files within path
+              {expand: true, nonull: true, flatten: true, src: ['src/img/*'], dest: 'public/img/', filter: 'isFile'},
+
+              // includes files within path and its sub-directories
+              // {expand: true, src: ['path/**'], dest: 'dest/'},
+
+              // makes all src relative to cwd
+              // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
+
+              // flattens results to a single level
+              // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'}
+            ]
+          }
         }
     });
 
@@ -105,8 +122,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jade', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+    grunt.registerTask('default', ['jade', 'copy', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
     grunt.registerTask('build', ['default']);
     grunt.registerTask('serve', ['connect']);
     grunt.registerTask('livereload', ['default', 'watch']);
