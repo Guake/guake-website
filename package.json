@@ -1,22 +1,23 @@
 {
-    "name": "guake-terminal",
-    "version": "0.0.0",
-    "dependencies": {},
-    "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-contrib-concat": "~0.3.0",
-        "grunt-contrib-uglify": "~0.2.0",
-        "grunt-contrib-jshint": "~0.6.0",
-        "grunt-contrib-watch": "~0.4.0",
-        "grunt-contrib-less": "~0.6.2",
-        "grunt-contrib-jade": "~0.8.0",
-        "grunt-contrib-connect": "~0.5.0",
-        "grunt-karma": "~0.4.3",
-        "karma": "~0.9",
-        "karma-jasmine": "~0.0.3",
-        "karma-chrome-launcher": "~0.0.2"
-    },
-    "engines": {
-        "node": ">=0.8.0"
-    }
+  "name": "guake-terminal",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-contrib-less": "~0.6.2",
+    "grunt-contrib-jade": "~0.8.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-karma": "~0.4.3",
+    "karma": "~0.9",
+    "karma-jasmine": "~0.0.3",
+    "karma-chrome-launcher": "~0.0.2",
+    "grunt-contrib-copy": "~0.5.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
 }
