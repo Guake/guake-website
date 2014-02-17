@@ -3,31 +3,35 @@ extends ../layouts/default.jade
 block content
 
     section.intro
-    .intro-body
-        .container
-            .row
-                .col-md-8.col-md-offset-2
-                    h1.brand-heading Guake Terminal
-                    p.intro-text
-                        An advanced but simple top-down terminal for the GNOME desktop
-                    .page-scroll
-                        a.btn.btn-circle(href='#info')
-                            i.fa.fa-angle-double-down.animated
+        .intro-body
+            .container
+                .row
+                    .col-md-8.col-md-offset-2
+                        h1.brand-heading Guake Terminal
+                        p.intro-text
+                            p An advanced but simple top-down terminal for the GNOME desktop
+                        .page-scroll
+                            a.btn.btn-circle(href='#info')
+                                i.fa.fa-angle-double-down.animated
+
 
     section#info.content-section.text-center
     .row
         .col-lg-8.col-lg-offset-2
             h1 What is Guake?
 
-            p Guake is a top-down terminal for Gnome (in the style of Yakuake for KDE, Tilda or the terminal used
-                in Quake).
+            p
+                | Guake is a top-down terminal for Gnome (in the style of Yakuake for KDE, Tilda or the
+                | terminal used in Quake).
 
             p You can check the screenshots to get a small feeling about it.
 
             h1 How to get it?
 
-            p Guake is packaged by a large number of distributions, among which are Fedora, Debian, Ubuntu or ArchLinux,
-                so please check your repo. Source tarballs are available; see the Downloads page.
+            p
+                | Guake is packaged by a large number of distributions, among which are Fedora, Debian,
+                | Ubuntu or ArchLinux, so please check your repo. Source tarballs are available; see the
+                | Downloads page.
 
             h1 Reporting bugs
 
@@ -41,15 +45,15 @@ block content
 
             h1 Frequently Asked questions
 
-            p You can also find some notes on the Frequently Asked Questions page. In case of troubles,  drop us a letter.
+            p You can also find some notes on the Frequently Asked Questions page. In case of troubles, drop us a letter.
 
     section#screenshots.content-section.text-center
     .row
         .col-lg-8.col-lg-offset-2
             h1 Screenshots
 
-    section#download.content-section.text-center
-        .download-section
+    section#distribution.content-section.text-center
+        .distribution-section
             .container
                 .col-lg-8.col-lg-offset-2
                     h1 Distribution Package
@@ -74,7 +78,7 @@ block content
                     h1 Compile Guake from sources
                     p
                         | General information on how to compile guake can be found in the
-                        a(href="https://github.com/Guake/guake/blob/master/INSTALL") INSTALL
+                        | <a href="https://github.com/Guake/guake/blob/master/INSTALL">INSTALL</a>
                         | file.
 
                     ul.list-inline.banner-social-buttons
@@ -87,7 +91,9 @@ block content
     section#faq.content-section.text-center
     .row
         .col-lg-8.col-lg-offset-2
-            h1 Problem with gconf schema?
+            h1 Frequently Asked Questions
+
+            h2 Problem with gconf schema?
 
             p (Extraced from the README)
             p If you receive a message asking you if you have installed guake.schemas properly when launching guake, the first question is:
