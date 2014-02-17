@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                     console: true,
                     module: true,
                     document: true,
-                    angular: true
+                    angular: false
                 },
                 globalstrict: false
             }
@@ -112,7 +112,26 @@ module.exports = function (grunt) {
               // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'}
             ]
           }
-        }
+        },
+        coffee: {
+          compile: {
+            options: {
+              bare: true
+            },
+            files: {
+              'public/js/guake-cs.js': ['src/coffee/guake.coffee'] // compile and concat into single file
+            }
+          },
+
+          glob_to_multiple: {
+            expand: true,
+            flatten: true,
+            cwd: 'path/to',
+            src: ['*.coffee'],
+            dest: 'path/to/dest/',
+            ext: '.js'
+          },
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -123,8 +142,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
 
-    grunt.registerTask('default', ['jade', 'copy', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+    grunt.registerTask('default', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
     grunt.registerTask('build', ['default']);
     grunt.registerTask('serve', ['connect']);
     grunt.registerTask('livereload', ['default', 'watch']);
