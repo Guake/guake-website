@@ -1,4 +1,4 @@
-; Use this file to start dev mode
+rem Use this file to start dev mode
 
 start /B grunt serve
 
