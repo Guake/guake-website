@@ -145,7 +145,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-coffee');
 
     grunt.registerTask('build', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
-    grunt.registerTask('dev', ['jade', 'copy', 'coffee', 'less']);
+    grunt.registerTask('dev', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat']);
+    grunt.registerTask('default', ['dev']);
     grunt.registerTask('serve', ['connect']);
     grunt.registerTask('livereload', ['dev', 'watch']);
 
