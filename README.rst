@@ -11,6 +11,11 @@ Installation
 Install Node, Grunt and other dependencies
 ******************************************
 
+Windows
+-------
+
+http://nodejs.org/download/
+
 .. code-block:: bash
 
     npm install -g grunt-cli
@@ -35,5 +40,10 @@ Upgrading required dependencies:
 
         npm update
 
-Set your you development environment
-************************************
+Update your development environment
+***********************************
+
+.. code-block:: bash
+
+    npm -g install bower
+    bower update
