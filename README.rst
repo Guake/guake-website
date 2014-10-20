@@ -8,8 +8,39 @@ This repository contains the source code of the guake.org web site
 Installation
 ============
 
+- entry point is ``npm``. ``npm`` installs main tools such as brower, grunt compilers and other
+  scripts management tools,
+- ``bower`` is level two of dependency tool. It main installs the packages you will need in your
+  website, such as ``angular``, ``jquery``, ``bootstrap``,...
+- ``grunt`` is the build tool. Use it to compile you source files to
+
 Install Node, Grunt and other dependencies
 ******************************************
+
+Linux
+-----
+
+Corporate behind HTTP Proxy:
+
+.. code-block:: bash
+
+    npm config set proxy ${http_proxy}
+    npm config set https-proxy ${https_proxy}
+
+Install:
+
+.. code-block:: bash
+
+    npm install
+    bower
+
+
+Update to latest available version
+----------------------------------
+
+.. code-block:: bash
+
+    npm update
 
 Windows
 -------
