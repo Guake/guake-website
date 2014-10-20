@@ -1,7 +1,8 @@
+#!/bin/bash
+
 echo "press Ctrl+c to close dev mode"
 
 (
-
     grunt serve &
 
     sleep 2
@@ -14,7 +15,7 @@ echo "press Ctrl+c to close dev mode"
         open $URL
     else
 
-        if [ -n $BROWSER ]; then
+        if [[ ! -z $BROWSER ]]; then
           $BROWSER $URL
         elif which xdg-open > /dev/null; then
           xdg-open $URL

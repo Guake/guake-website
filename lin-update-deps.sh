@@ -1,0 +1,2 @@
+npm update
+bower update
