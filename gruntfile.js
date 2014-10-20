@@ -137,6 +137,13 @@ module.exports = function (grunt) {
             ext: '.js'
           },
         },
+        sitemap: {
+            dist: {
+            siteRoot: 'public/',
+            homepage: 'http://www.guake.org',
+            pattern: '/*.html',
+        },
+    }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -148,8 +155,17 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-sitemap');
 
-    grunt.registerTask('build', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+    grunt.registerTask('build', ['jade',
+                                 'copy',
+                                 'coffee',
+                                 'less',
+                                 'sitemap',
+                                 'jshint:beforeConcat',
+                                 'concat',
+                                 'jshint:afterConcat',
+                                 'uglify']);
     grunt.registerTask('release', ['build', 'uglify']);
     grunt.registerTask('dev', ['build']);
     grunt.registerTask('default', ['dev']);
