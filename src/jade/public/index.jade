@@ -71,22 +71,34 @@ block content
                     p emerge -av guake
 
 
-    section#sources.content-section.text-center
-        .download-section
+    section.intro
+        .intro-body
             .container
-                .col-lg-8.col-lg-offset-2
-                    h1 Compile Guake from sources
-                    p
-                        | General information on how to compile guake can be found in the
-                        | <a href="https://github.com/Guake/guake/blob/master/INSTALL">INSTALL</a>
-                        | file.
+                .row
+                    .col-md-8.col-md-offset-2
+                        h1.brand-heading Guake Terminal
+                        p.intro-text
+                            p An advanced but simple top-down terminal for the GNOME desktop
+                        .page-scroll
+                            a.btn.btn-circle(href='#info')
+                                i.fa.fa-angle-double-down.animated
 
-                    ul.list-inline.banner-social-buttons
-                        li
-                            a.btn.btn-default.btn-lg(href='https://github.com/Guake/guake/')
-                                i.fa.fa-github.fa-fw
-                                span.network-name
-                                    | Visit the Github project page
+    section#sources.content-section.text-center
+            .download-section
+                .container
+                    .col-lg-8.col-lg-offset-2
+                        h1 Compile Guake from sources
+                        p
+                            | General information on how to compile guake can be found in the
+                            | <a href="https://github.com/Guake/guake/blob/master/INSTALL">INSTALL</a>
+                            | file.
+
+                        ul.list-inline.banner-social-buttons
+                            li
+                                a.btn.btn-default.btn-lg(href='https://github.com/Guake/guake/')
+                                    i.fa.fa-github.fa-fw
+                                    span.network-name
+                                        | Visit the Github project page
 
     section#faq.content-section.text-center
     .row
