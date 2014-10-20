@@ -10,22 +10,5 @@
             "guake",
             "terminal"
         ]
-    },
-    "angular": {
-        "appModuleName": {
-            "original": "guake",
-            "camelized": "guake",
-            "dasherized": "guake-terminal",
-            "slugified": "guake-terminal",
-            "parts": [
-                "guake",
-                "terminal"
-            ]
-        },
-        "includeModules": {
-            "resource": false,
-            "cookies": false,
-            "sanitize": false
-        }
     }
 }

@@ -26,13 +26,13 @@ module.exports = function (grunt) {
             },
             angular: {
                 src: [
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.prefix',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/controllers/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/directives/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/filters/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/services/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.suffix'
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.prefix',
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.js',
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/controllers/**/*.js',
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/directives/**/*.js',
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/filters/**/*.js',
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/services/**/*.js',
+                    'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.suffix'
                 ],
                 dest: 'public/js/<%= jablConfig.appTitle.camelized %>.js'
             }
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         },
         jshint: {
             beforeConcat: {
-                src: ['gruntfile.js', 'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/**/*.js']
+                src: ['gruntfile.js', 'src/js/src/<%= jablConfig.appTitle.camelized %>/**/*.js']
             },
             afterConcat: {
                 src: [
