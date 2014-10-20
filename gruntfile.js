@@ -21,21 +21,13 @@ module.exports = function (grunt) {
             }
         },
         concat: {
-            options: {
-                separator: ''
-            },
-            frontend: {
+            deps: {
                 src: [
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.prefix',
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.js',
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/controllers/**/*.js',
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/directives/**/*.js',
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/filters/**/*.js',
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/services/**/*.js',
-                    'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.suffix'
+                    'public/js/<%= jablConfig.appTitle.camelized %>-cs.js'
                 ],
                 dest: 'public/js/<%= jablConfig.appTitle.camelized %>.js'
             }
+
         },
         uglify: {
             options: {
@@ -43,7 +35,7 @@ module.exports = function (grunt) {
             },
             jid: {
                 files: {
-                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['<%= concat.frontend.dest %>']
+                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['public/js/<%= jablConfig.appTitle.camelized %>.js']
                 }
             }
         },
@@ -53,7 +45,7 @@ module.exports = function (grunt) {
             },
             afterConcat: {
                 src: [
-                    '<%= concat.frontend.dest %>'
+                    'public/js/<%= jablConfig.appTitle.camelized %>.js'
                 ]
             },
             options: {
@@ -154,7 +146,7 @@ module.exports = function (grunt) {
             flatten: true,
             cwd: 'path/to',
             src: ['*.coffee'],
-            dest: 'path/to/dest/',
+            dest: 'public/js/',
             ext: '.js'
           },
         },
@@ -179,9 +171,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sitemap');
 
     grunt.registerTask('build', ['jade',
-                                 'copy',
                                  'coffee',
                                  'less',
+                                 'copy',
                                  'sitemap',
                                  'jshint:beforeConcat',
                                  'concat',
