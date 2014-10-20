@@ -24,7 +24,7 @@ module.exports = function (grunt) {
             options: {
                 separator: ''
             },
-            angular: {
+            frontend: {
                 src: [
                     'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.prefix',
                     'src/js/src/<%= jablConfig.appTitle.camelized %>/<%= jablConfig.appTitle.camelized %>.js',
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
             },
             jid: {
                 files: {
-                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['<%= concat.angular.dest %>']
+                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['<%= concat.frontend.dest %>']
                 }
             }
         },
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
             },
             afterConcat: {
                 src: [
-                    '<%= concat.angular.dest %>'
+                    '<%= concat.frontend.dest %>'
                 ]
             },
             options: {
@@ -100,7 +100,14 @@ module.exports = function (grunt) {
           main: {
             files: [
               // includes files within path
-              {expand: true, nonull: true, flatten: true, src: ['src/img/*'], dest: 'public/img/', filter: 'isFile'},
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['src/img/*'],
+                dest: 'public/img/',
+                filter: 'isFile'
+              },
 
               // includes files within path and its sub-directories
               // {expand: true, src: ['path/**'], dest: 'dest/'},
@@ -114,7 +121,21 @@ module.exports = function (grunt) {
           },
           deps: {
             files: [
-              {expand: true, nonull: true, flatten: true, src: ['public/bower/jquery/dist/jquery.js'], dest: 'public/bower/jquery', filter: 'isFile'},
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['public/bower/bootstrap/dist/js/bootstrap.js',
+                      'public/bower/jquery/dist/jquery.js',
+                      'public/bower/jquery.easing/js/jquery.easing.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.scrollTo-1.4.3.1.min.js',
+                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.scrollorama.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js'
+                      ],
+                dest: 'public/js/',
+                filter: 'isFile'
+              },
             ]
           }
         },
