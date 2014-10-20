@@ -111,6 +111,11 @@ module.exports = function (grunt) {
               // flattens results to a single level
               // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'}
             ]
+          },
+          deps: {
+            files: [
+              {expand: true, nonull: true, flatten: true, src: ['public/bower/jquery/dist/jquery.js'], dest: 'public/bower/jquery', filter: 'isFile'},
+            ]
           }
         },
         coffee: {
@@ -145,7 +150,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-coffee');
 
     grunt.registerTask('build', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
-    grunt.registerTask('dev', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat']);
+    grunt.registerTask('release', ['build', 'uglify']);
+    grunt.registerTask('dev', ['build']);
     grunt.registerTask('default', ['dev']);
     grunt.registerTask('serve', ['connect']);
     grunt.registerTask('livereload', ['dev', 'watch']);
