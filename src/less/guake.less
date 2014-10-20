@@ -5,8 +5,8 @@
 // Variables
 
 @primary: #28c3ab;
-@dark: #000;
-@light: #fff;
+@background: #000;
+@foreground: #fff;
 
 // LESS
 
@@ -14,8 +14,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: @light;
-    background-color: @dark;
+    color: @foreground;
+    background-color: @background;
 }
 
 html {
@@ -76,7 +76,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,0.3);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: @dark;
+    background-color: @background;
     padding-left: 30px;
     padding-right:150px;
 }
@@ -90,7 +90,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: @light;
+    color: @foreground;
 }
 
 .navbar-custom .nav li a {
@@ -109,7 +109,7 @@ a:focus {
 .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: @light;
+    color: @foreground;
 }
 
 .navbar-toggle:focus,
@@ -130,7 +130,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: @dark;
+        background-color: @background;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -140,22 +140,22 @@ a:focus {
 
  // Full Page Image Intro Section
 
- .intro {
+#intro {
     display: table;
     width: 100%;
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: @light;
-    background-color: @dark;
+    color: @foreground;
+    background-color: @background;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background: url(../img/intro-bg.jpg) no-repeat top left fixed;
 }
 
 .intro-body {
-    background: url(../img/intro-bg.jpg) no-repeat bottom center fixed;
     display: table-cell;
     vertical-align: middle;
 }
@@ -169,7 +169,7 @@ a:focus {
 }
 
 @media(min-width:767px) {
-    .intro {
+    #intro {
         height: 100%;
         padding: 0;
     }
@@ -188,10 +188,10 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid @light;
+    border: 2px solid @foreground;
     border-radius: 35px;
     font-size: 40px;
-    color: @light;
+    color: @foreground;
     background: transparent;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -201,10 +201,13 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: none;
-    color: @light;
+    color: @foreground;
     background: rgba(255,255,255,0.1);
 }
 
+.page-scroll{
+    text-align: center;
+}
 .page-scroll .btn-circle i.animated {
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
@@ -263,17 +266,13 @@ a:focus {
     padding-top: 100px;
 }
 
-.sources-body {
-    //background: url(../img/downloads-bg.jpg) no-repeat bottom center fixed;
-    width: 100%;
-}
 
-.download-section {
+#sources {
     width: 100%;
     padding: 50px 0;
-    color: @light;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: @dark;
+    color: @foreground;
+    background: url(../img/intro-bg.jpg) no-repeat top left scroll;
+    background-color: @background;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -283,9 +282,9 @@ a:focus {
 .distribution-section {
     width: 100%;
     padding: 50px 0;
-    color: @light;
+    color: @foreground;
     background: url(../img/screenshot.png) no-repeat center center scroll;
-    background-color: @dark;
+    background-color: @background;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -334,7 +333,7 @@ a:focus {
 .btn-default:focus {
     border: 1px solid @primary;
     outline: none;
-    color: @dark;
+    color: @background;
     background-color: @primary;
 }
 

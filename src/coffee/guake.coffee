@@ -26,14 +26,13 @@ $(document).ready ->
         RepositionNav()
         return
 
-
     #.parallax(xPosition, adjuster, inertia, outerHeight) options:
     #xPosition - Horizontal position of the element
     #adjuster - y position to start from
     #inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
     #outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-    $('.intro-body').parallax(0, 0, 0.2, false);
-    $('.sources').parallax(0, 1500, 0.2, false);
+    $('#intro').parallax(0, 900, 0.2, false);
+    $('#sources').parallax(0, 2000, 0.4, true);
     deck = new $.scrolldeck(
         slides: ".slide"
         buttons: "#nav li a"

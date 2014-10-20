@@ -2,7 +2,7 @@ extends ../layouts/default.jade
 
 block content
 
-    section.intro
+    section#intro
         .intro-body
             .container
                 .row
@@ -47,10 +47,17 @@ block content
 
             p You can also find some notes on the Frequently Asked Questions page. In case of troubles, drop us a letter.
 
+            .page-scroll
+                a.btn.btn-circle(href='#screenshots')
+                    i.fa.fa-angle-double-down.animated
+
     section#screenshots.content-section.text-center
     .row
         .col-lg-8.col-lg-offset-2
             h1 Screenshots
+                .page-scroll
+                    a.btn.btn-circle(href='#distribution')
+                        i.fa.fa-angle-double-down.animated
 
     section#distribution.content-section.text-center
         .distribution-section
@@ -69,6 +76,9 @@ block content
 
                     h2 Gentoo
                     p emerge -av guake
+                    .page-scroll
+                        a.btn.btn-circle(href='#sources')
+                            i.fa.fa-angle-double-down.animated
 
     section#sources.content-section.text-center
             .download-section
@@ -86,6 +96,10 @@ block content
                                     i.fa.fa-github.fa-fw
                                     span.network-name
                                         | Visit the Github project page
+
+                        .page-scroll
+                            a.btn.btn-circle(href='#faq')
+                                i.fa.fa-angle-double-down.animated
 
     section#faq.content-section.text-center
     .row
@@ -111,3 +125,7 @@ block content
             p Then you can restart the compilation as before
 
             p $ make
+
+            .page-scroll
+                a.btn.btn-circle(href='#intro')
+                    i.fa.fa-angle-double-up.animated
