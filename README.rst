@@ -27,6 +27,11 @@ the procedures and commands in easily understandable scripts, so they can be use
 my daily development routine.
 
 
+More information
+----------------
+
+* http://gruntjs.com/getting-started
+
 Components
 ==========
 
@@ -40,16 +45,34 @@ Main building tools
 - ``grunt`` is the build tool. Use it to compile you source files into testable website and to
   prepare the release process.
 
-
 Main javascript components used in this project
 -----------------------------------------------
 
 - ``normalize.css``: CSS compatiblity
 - ``jquery``: the infamous library
-- ``angular``: main framework
 - ``bootstrap``: html template
 - ``jquery.easing``: easing animation (non linear animations)
 - ``jquery-scrolldeck``: perform animation on scroll position, parallax, ...
+- ``less``: Less files are compiled into CSS files. Easier and more power to use than bare CSS
+- ``coffeescript``: Same than Less for CSS, Coffeescript make Javascript a bit simpler to use.
+- ``jade``: Again, same than Less for CSS and Coffeescript for JavaScript. Jade files are simpler
+  than HTML file
+
+Overview
+--------
+
+::
+
+    Jade         ===============================> public/*.html
+
+    Coffeescript ===== + jquery/other deps =====> public/js/*.js
+
+    Less         ===============================> public/css/*.css
+
+    Other
+    images/files ===============================> public/img/*.png
+                                                  public/files/*.*
+
 
 
 Installation
@@ -123,3 +146,23 @@ Update your development environment
 
     npm -g install bower
     bower update
+
+
+Project bootstrapping
+=====================
+
+This project has been started by a squeleton built by Yeoman, using ``generator-jabl``:
+
+.. code-block:: bash
+
+    npm install -g yo
+    npm install -g generator-jabl
+    yo jabl
+
+This generated the main ``packages.json``, ``grunt.json`` and the directory structure.
+
+References:
+
+* http://cnpmjs.org/package/generator-jabl
+
+
