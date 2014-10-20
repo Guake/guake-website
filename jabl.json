@@ -1,1 +1,14 @@
-{"includeBootstrap":true,"includeAngular":true,"appTitle":{"original":"Guake Terminal","camelized":"guake","dasherized":"guake-terminal","slugified":"guake-terminal","parts":["guake","terminal"]},"angular":{"appModuleName":{"original":"guake","camelized":"guake","dasherized":"guake-terminal","slugified":"guake-terminal","parts":["guake","terminal"]},"includeModules":{"resource":false,"cookies":false,"sanitize":false}}}
+{
+    "includeBootstrap": true,
+    "includeAngular": false,
+    "appTitle": {
+        "original": "Guake Terminal",
+        "camelized": "guake",
+        "dasherized": "guake-terminal",
+        "slugified": "guake-terminal",
+        "parts": [
+            "guake",
+            "terminal"
+        ]
+    }
+}

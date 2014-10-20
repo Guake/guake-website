@@ -21,21 +21,13 @@ module.exports = function (grunt) {
             }
         },
         concat: {
-            options: {
-                separator: ''
-            },
-            angular: {
+            deps: {
                 src: [
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.prefix',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/controllers/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/directives/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/filters/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/services/**/*.js',
-                    'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/<%= jablConfig.angular.appModuleName.camelized %>.suffix'
+                    'public/js/<%= jablConfig.appTitle.camelized %>-cs.js'
                 ],
                 dest: 'public/js/<%= jablConfig.appTitle.camelized %>.js'
             }
+
         },
         uglify: {
             options: {
@@ -43,17 +35,17 @@ module.exports = function (grunt) {
             },
             jid: {
                 files: {
-                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['<%= concat.angular.dest %>']
+                    'public/js/<%= jablConfig.appTitle.camelized %>.min.js': ['public/js/<%= jablConfig.appTitle.camelized %>.js']
                 }
             }
         },
         jshint: {
             beforeConcat: {
-                src: ['gruntfile.js', 'src/js/src/<%= jablConfig.angular.appModuleName.camelized %>/**/*.js']
+                src: ['gruntfile.js', 'src/js/src/<%= jablConfig.appTitle.camelized %>/**/*.js']
             },
             afterConcat: {
                 src: [
-                    '<%= concat.angular.dest %>'
+                    'public/js/<%= jablConfig.appTitle.camelized %>.js'
                 ]
             },
             options: {
@@ -100,7 +92,14 @@ module.exports = function (grunt) {
           main: {
             files: [
               // includes files within path
-              {expand: true, nonull: true, flatten: true, src: ['src/img/*'], dest: 'public/img/', filter: 'isFile'},
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['src/img/*'],
+                dest: 'public/img/',
+                filter: 'isFile'
+              },
 
               // includes files within path and its sub-directories
               // {expand: true, src: ['path/**'], dest: 'dest/'},
@@ -114,7 +113,21 @@ module.exports = function (grunt) {
           },
           deps: {
             files: [
-              {expand: true, nonull: true, flatten: true, src: ['public/bower/jquery/dist/jquery.js'], dest: 'public/bower/jquery', filter: 'isFile'},
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['public/bower/bootstrap/dist/js/bootstrap.js',
+                      'public/bower/jquery/dist/jquery.js',
+                      'public/bower/jquery.easing/js/jquery.easing.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.scrollTo-1.4.3.1.min.js',
+                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.scrollorama.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js'
+                      ],
+                dest: 'public/js/',
+                filter: 'isFile'
+              },
             ]
           }
         },
@@ -133,10 +146,17 @@ module.exports = function (grunt) {
             flatten: true,
             cwd: 'path/to',
             src: ['*.coffee'],
-            dest: 'path/to/dest/',
+            dest: 'public/js/',
             ext: '.js'
           },
         },
+        sitemap: {
+            dist: {
+            siteRoot: 'public/',
+            homepage: 'http://www.guake.org',
+            pattern: '/*.html',
+        },
+    }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -148,8 +168,17 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-sitemap');
 
-    grunt.registerTask('build', ['jade', 'copy', 'coffee', 'less', 'jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+    grunt.registerTask('build', ['jade',
+                                 'coffee',
+                                 'less',
+                                 'copy',
+                                 'sitemap',
+                                 'jshint:beforeConcat',
+                                 'concat',
+                                 'jshint:afterConcat',
+                                 'uglify']);
     grunt.registerTask('release', ['build', 'uglify']);
     grunt.registerTask('dev', ['build']);
     grunt.registerTask('default', ['dev']);

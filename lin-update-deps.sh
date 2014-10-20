@@ -1,2 +1,2 @@
 npm update
-bower update
+bower update --save
