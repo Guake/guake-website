@@ -8,18 +8,19 @@ This repository contains the source code of the guake.org web site
 Introduction
 ============
 
-Because web development is now fully a programation, building a web page required to set up all the
-paradigms we use when developing any software. That why we have ``source code``, ``compilators``,
-``components``, ``deployment procedures``,...
+Because writing web pages using notepads or word-like software is not more relevant, we now need to
+use a true development environment. That's what is "web development". So, building a web page
+required to set up all the paradigms we use when developing any other "heavy" software. That why we
+have ``source code``, ``compilators``, ``components``, ``deployment procedures``,...
 
-I am not really used to web development but this kind of suite me, since I am used to commit my
-change in a central repository, write deployment scripts, think and rethink the architecture of my
-software.
+I am not really used to web development but this kind of suite me, since I do software development
+for almost 20 years. I am used to commit my change in a central repository, write deployment
+scripts, think and rethink the architecture of my software. Why not for web pages?
 
-Designing a good looking web page is now just a **part** of the job of building a web site from
-scratch. To be fair, I used to write PHP websites in my teen ages, and since then, I only managed to
-get in touch with open source frame work such as Drupal, Joomla or Wordpress, relying on someelse's
-job to deploy a good looking website.
+Designing a good looking web page is now just a small **part** of the job of building a web site. To
+be fair, I used to write PHP websites in my teen ages, and since then, I only managed to get in
+touch with open source frame work such as Drupal, Joomla or Wordpress, relying on someelse's job to
+deploy a good looking website. Software programming was more for C++, Java or even python projects.
 
 For Guake I have decided to give a try on writing a one page web site using cutting edge web
 development tool. But some good old habbits are still here, that's why I have writen down most of
@@ -27,16 +28,11 @@ the procedures and commands in easily understandable scripts, so they can be use
 my daily development routine.
 
 
-More information
-----------------
-
-* http://gruntjs.com/getting-started
-
 Components
 ==========
 
 Main building tools
--------------------
+*******************
 
 - entry point is ``npm``. ``npm`` installs main tools such as brower, grunt compilers and other
   scripts management tools,
@@ -45,23 +41,62 @@ Main building tools
 - ``grunt`` is the build tool. Use it to compile you source files into testable website and to
   prepare the release process.
 
-Main javascript components used in this project
------------------------------------------------
+More information
+----------------
 
-- ``normalize.css``: CSS compatiblity
-- ``jquery``: the infamous library
-- ``bootstrap``: html template
-- ``jquery.easing``: easing animation (non linear animations)
-- ``jquery-scrolldeck``: perform animation on scroll position, parallax, ...
-- ``less``: Less files are compiled into CSS files. Easier and more power to use than bare CSS
-- ``coffeescript``: Same than Less for CSS, Coffeescript make Javascript a bit simpler to use.
-- ``jade``: Again, same than Less for CSS and Coffeescript for JavaScript. Jade files are simpler
-  than HTML file
+* http://gruntjs.com/getting-started
 
-Overview
---------
+Technologies
+============
 
-::
+In the new web development world, we need to carefully choose the language that matches our needs.
+It is a real paradox that there are so many languages that needs to fill the lack of html, css, and
+javascripts. These three are used in **every** modern web browser, yet they are not suited for web
+development (so on the developer side).
+
+File formats
+************
+
+From my humble web 2.0 experience I choose the following technologies:
+
+**Less**
+
+  This source file compiles to CSS file. I clearly prefere CSS over concurent solution like SCSS, it
+  is less powerful, but powerful enough, and doesn't repends on Ruby environment.
+
+  Reference: http://lesscss.org/
+
+**CoffeeScript**
+
+  As source file for Javascript. It adds syntax sugar over the ugly javascript syntax (I really hate
+  JavaScript). Even if I am not completely fan of CoffeeScript syntax (I hate the definition syntax
+  for a method, it far from being intuitive), but, it is still better than bare JavaScript.
+
+  Reference: http://coffeescript.org/
+
+**Jade**
+
+  This is compiled into Html page. It is a simple template system than mainly binds HTML tags
+  without complex HTML closing tags and hides all the verbosity of the HTML/XML format.
+
+  Reference: http://jade-lang.com/
+
+All these files are managed though the ``grunt`` building tool. Of course, ``npm``/``nodejs`` is
+nearby, but ony in the installation process.
+
+Other file format:
+
+**reStructuredText**
+
+  Forget about using the the flawed Markdown format for writing your formatted text documents. Every
+  implementations has its own interpretation, leading to a format with almost no standart.
+  ``reStructuredText`` defines a proper standart for basic formatting a clean extention mecanisms
+  for other parser to add more feature (such as ``sphinx-builder`` documentation system).
+
+Building Overview
+-----------------
+
+Source files are converted into the web page like this::
 
     Jade         ===============================> public/*.html
 
@@ -73,30 +108,68 @@ Overview
     images/files ===============================> public/img/*.png
                                                   public/files/*.*
 
+The Web components used in this projects
+****************************************
+
+**bootstrap**
+
+  The famous framework from Twitter. It hides all complexity over the responsiveness stuff a modern
+  website needs to respect in order to run seamlessly on PC, mobile, and any other devices.
+
+  It also deals with all the differences between web browser I, as a developer, *do NOT want to deal
+  with*. Thanks to ``bootstrap`` and its ``normalize.css``, all these annoying differences are
+  abstracted.
+
+  Reference: http://getbootstrap.com/
+
+**jquery-scrolldeck**
+
+  Simpler and powerful animation scrolling framework.
+
+  Reference: http://johnpolacek.github.io/scrolldeck.js/
+
+  **Note**: see this page for reproducting the *parallax* effect:
+  http://www.ianlunn.co.uk/blog/code-tutorials/recreate-nikebetterworld-parallax/
+
+**jquery.easing**
+
+  Smooth movements on CSS events.
+
+  Reference: http://gsgd.co.uk/sandbox/jquery/easing/
+
+Other Grunt plugins used
+************************
+
+**sitemap**
+
+  This plugin helps generating a Search Engine friendly file named ``sitemap.xml``.
+
+**concat**, **uglify**, **watch**, **connect**, **copy**
+
+  These grunt plugins are used in the build system in order to perform operations on the files,
+  concatenating and *uglifying* the javascript files when preparing the deployment package.
 
 
 Installation
 ============
 
-Install Node, Grunt and other dependencies
-------------------------------------------
-
 Linux
------
+*****
 
-Corporate behind HTTP Proxy:
+Corporate behind HTTP Proxy
+---------------------------
 
 .. code-block:: bash
 
     npm config set proxy ${http_proxy}
     npm config set https-proxy ${https_proxy}
 
-Install:
+Install
+-------
 
 .. code-block:: bash
 
-    npm install
-    bower
+    ./lin-install.sh
 
 
 Update to latest available version
@@ -104,52 +177,48 @@ Update to latest available version
 
 .. code-block:: bash
 
-    npm update
+    ./lin-update-deps.sh
 
 Windows
--------
+*******
 
-http://nodejs.org/download/
+Install Node
+------------
+
+  http://nodejs.org/download/
 
 Install the .NET Framework 2.0 SDK
-(http://www.microsoft.com/fr-fr/download/confirmation.aspx?id=19988)
+----------------------------------
+
+(seems required to build karma)
+
+  http://www.microsoft.com/fr-fr/download/confirmation.aspx?id=19988
+
+Install grunt and bower
+-----------------------
 
 .. code-block:: bash
 
     npm install -g grunt-cli
+    npm install -g bower
 
-The dependency packages are:
+Upgrading required dependencies
+-------------------------------
 
 .. code-block:: bash
 
-    npm install grunt-contrib-uglify --save-dev
-    npm install grunt-contrib-jshint --save-dev
-    npm install grunt-contrib-concat --save-dev
-    npm install grunt-contrib-watch --save-dev
-    npm install grunt-contrib-jade --save-dev
-    npm install grunt-contrib-less --save-dev
-    npm install grunt-contrib-connect --save-dev
-    npm install grunt-contrib-copy --save-dev
-    npm install grunt-contrib-coffee --save-dev
-    npm install jquery --save-dev
-
-Upgrading required dependencies:
-
-    .. code-block:: bash
-
-        npm update
+    win-update-deps.bat
 
 Update your development environment
 -----------------------------------
 
 .. code-block:: bash
 
-    npm -g install bower
-    bower update
+    win-install.bat
 
 
 EditorConfig
-------------
+============
 
 Please use an editor that supports EditorConfig
 
@@ -157,8 +226,27 @@ Please use an editor that supports EditorConfig
 
 For SublimeText, please install ``EditorConfig``.
 
+Development process
+===================
+
+Use the ``[win|lin]-dev-build.[bat|sh]`` script to build the environment. If you want to inspect
+your change in a web browser, I advise to use ``[win|lin]-dev-serve.[bat|sh]``. It will starts a
+small web server and open you browser to the ``http://localhost:9000`` URL, where you can test the
+changes in live.
+
+TODO: I'd like to add LiveReload support to this web page.
+
+Unit testing
+************
+
+Unit test is not supported for the moment in the current development environment, but that is a part
+of the project I would like to add in the futur.
+
+Miscellaneous informations
+==========================
+
 Project bootstrapping
-=====================
+*********************
 
 This project has been started by a squeleton built by Yeoman, using ``generator-jabl``:
 
@@ -176,8 +264,10 @@ References:
 
 
 Travis
-======
+******
 
 A travis build has been configured for this repository. Find it here:
 
   https://travis-ci.org/Guake/guake-website/builds
+
+It used to check that every pull request at least compiles.
