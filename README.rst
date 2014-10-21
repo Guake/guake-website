@@ -65,7 +65,11 @@ From my humble web 2.0 experience I choose the following technologies:
 **Less**
 
   This source file compiles to CSS file. I clearly prefere CSS over concurent solution like SCSS, it
-  is less powerful, but powerful enough, and doesn't repends on Ruby environment.
+  is less powerful, but powerful enough, and doesn't repends on Ruby environment (I hate when a tool
+  forces us to setup a complete environment, completely different from the current one).
+
+  I clearly prefer the ``sass`` syntax, for the lack of curly braces, matching the two other file
+  format syntaxes.
 
   **Reference**: http://lesscss.org/
 
