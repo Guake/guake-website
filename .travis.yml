@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-  - 0.8
-  - 0.9
+  - 0.11
 
 before_install:
   - npm install -g grunt-cli
@@ -17,3 +16,5 @@ env:
 
 script:
   - grunt --verbose --force
+  - grunt dev
+  - grunt release
