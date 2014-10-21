@@ -2,7 +2,7 @@
   "name": "guake-terminal-website",
   "version": "1.0.0",
   "dependencies": {
-    "grunt-sitemap": "^1.1.0"
+    "grunt-sitemap": "~1.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
