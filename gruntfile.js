@@ -118,12 +118,12 @@ module.exports = function (grunt) {
                 nonull: true,
                 flatten: true,
                 src: ['public/bower/bootstrap/dist/js/bootstrap.js',
-                      'public/bower/jquery/dist/jquery.js',
-                      'public/bower/jquery.easing/js/jquery.easing.js',
+                      'public/bower/jquery-scrolldeck/js/jquery-1.8.2.min.js',
+                      'public/bower/jquery-scrolldeck/js/jquery.easing.1.3.js',
                       'public/bower/jquery-scrolldeck/js/jquery.scrollTo-1.4.3.1.min.js',
-                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
                       'public/bower/jquery-scrolldeck/js/jquery.scrollorama.js',
-                      'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js'
+                      'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js',
+                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js'
                       ],
                 dest: 'public/js/',
                 filter: 'isFile'
@@ -164,10 +164,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jade');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks ('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-sitemap');
 
     grunt.registerTask('build', ['jade',
@@ -184,5 +185,4 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['dev']);
     grunt.registerTask('serve', ['connect']);
     grunt.registerTask('livereload', ['dev', 'watch']);
-
 };

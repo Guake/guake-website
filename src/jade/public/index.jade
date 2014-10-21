@@ -2,7 +2,7 @@ extends ../layouts/default.jade
 
 block content
 
-    section#intro
+    section#intro.slide
         .intro-body
             .container
                 .row
@@ -14,52 +14,53 @@ block content
                             a.btn.btn-circle(href='#info')
                                 i.fa.fa-angle-double-down.animated
 
-
-    section#info.content-section.text-center
-    .row
+    section#info.slide
         .col-lg-8.col-lg-offset-2
-            h1 What is Guake?
 
-            p
+            h1(class="animate-in" data-animation="space-in") What is Guake?
+
+            p(class="animate-in" data-animation="fade-in")
                 | Guake is a top-down terminal for Gnome, in the style of Yakuake for KDE, Tilda or the
                 | terminal used in Quake.
 
-            p You can check the screenshots to get a small feeling about it.
+            p(class="animate-in" data-animation="fade-in")
+                | You can check the screenshots to get a small feeling about it.
 
-            h1 How to get it?
+            h1(class="animate-in" data-animation="space-in") How to get it?
 
-            p
+            p(class="animate-in" data-animation="fade-in")
                 | Guake is packaged by a large number of distributions, among which are Fedora, Debian,
                 | Ubuntu or ArchLinux, so please check your repo. Source tarballs are available; see the
                 | Downloads page.
 
-            h1 Reporting bugs
+            h1(class="animate-in" data-animation="space-in") Reporting bugs
 
-            p Oh the bugs. Report 'em all! To file a bug report, use this link. Though you have to register and
-                login first.
+            p(class="animate-in" data-animation="fade-in")
+                | Oh the bugs. Report 'em all! To file a bug report, use this link. Though you have to register and
+                | login first.
 
-            h1 Hacking
+            h1(class="animate-in" data-animation="space-in") Hacking
 
-            p If you starve to add a feature to Guake, head to the GoingFurther page. Some knowledge of Python, git
-                and GTK is all what you need.
+            p(class="animate-in" data-animation="fade-in")
+                | If you starve to add a feature to Guake, head to the GoingFurther page. Some knowledge of Python, git
+                | and GTK is all what you need.
 
-            h1 Frequently Asked questions
+            h1(class="animate-in" data-animation="space-in") Frequently Asked questions
 
-            p You can also find some notes on the Frequently Asked Questions page. In case of troubles, drop us a letter.
+            p(class="animate-in" data-animation="fade-in") You can also find some notes on the Frequently Asked Questions page. In case of troubles, drop us a letter.
 
             .page-scroll
                 a.btn.btn-circle(href='#screenshots')
                     i.fa.fa-angle-double-down.animated
 
-    section#screenshots.content-section.text-center
-    .row
+    section#screenshots.slide
         .col-lg-8.col-lg-offset-2
             h1 Screenshots
                 .page-scroll
                     a.btn.btn-circle(href='#distribution')
                         i.fa.fa-angle-double-down.animated
 
-    section#distribution.content-section.text-center
+    section#distribution.slide
         .distribution-section
             .container
                 .col-lg-8.col-lg-offset-2
@@ -80,7 +81,7 @@ block content
                         a.btn.btn-circle(href='#sources')
                             i.fa.fa-angle-double-down.animated
 
-    section#sources.content-section.text-center
+    section#sources.slide
             .download-section
                 .container
                     .col-lg-8.col-lg-offset-2
@@ -101,8 +102,7 @@ block content
                             a.btn.btn-circle(href='#faq')
                                 i.fa.fa-angle-double-down.animated
 
-    section#faq.content-section.text-center
-    .row
+    section#faq.slide
         .col-lg-8.col-lg-offset-2
             h1 Frequently Asked Questions
 
