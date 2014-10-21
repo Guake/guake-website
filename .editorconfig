@@ -12,6 +12,7 @@ insert_final_newline = true
 # Use indent size to 2 for reStructuredText, to help building text blocks.
 [*.rst]
 indent_size = 2
+max_line_length = 100
 
 # Same for package.json, travis yaml, indent is set to 2
 [{package.json,.travis.yml,bower.json}]
