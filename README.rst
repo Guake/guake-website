@@ -175,3 +175,9 @@ References:
 * http://cnpmjs.org/package/generator-jabl
 
 
+Travis
+======
+
+A travis build has been configured for this repository. Find it here:
+
+  https://travis-ci.org/Guake/guake-website/builds
