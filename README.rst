@@ -148,6 +148,15 @@ Update your development environment
     bower update
 
 
+EditorConfig
+------------
+
+Please use an editor that supports EditorConfig
+
+  http://editorconfig.org/
+
+For SublimeText, please install ``EditorConfig``.
+
 Project bootstrapping
 =====================
 

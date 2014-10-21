@@ -83,7 +83,7 @@ module.exports = function (grunt) {
                 livereload: true
             },
             files: [
-                'Gruntfile.js',
+                'gruntfile.js',
                 'src/**/*'
             ],
             tasks: ['default']
