@@ -11,7 +11,7 @@ Introduction
 Because writing web pages using notepads or word-like software is not more relevant, we now need to
 use a true development environment. That's what is "web development". So, building a web page
 required to set up all the paradigms we use when developing any other "heavy" software. That why we
-have ``source code``, ``compilators``, ``components``, ``deployment procedures``,...
+have **source code**, **compilators**, **components**, **deployment procedures**,...
 
 I am not really used to web development but this kind of suite me, since I do software development
 for almost 20 years. I am used to commit my change in a central repository, write deployment
@@ -34,16 +34,19 @@ Components
 Main building tools
 *******************
 
-- entry point is ``npm``. ``npm`` installs main tools such as brower, grunt compilers and other
-  scripts management tools,
-- ``bower`` is level two of dependency tool. It main installs the packages you will need in your
-  website, such as ``angular``, ``jquery``, ``bootstrap``,...
-- ``grunt`` is the build tool. Use it to compile you source files into testable website and to
-  prepare the release process.
+- the main entry point for the project is ``npm``. ``npm`` (nodejs) installs the main tools such as
+  ``brower``, the ``grunt`` task manager and other scripts management tools,
+- ``bower`` is the level two of dependency management. It mainly installs the packages you will use
+  in your website, such as ``angular``, ``jquery``, ``bootstrap``,...
+- ``grunt`` is the build tool. Basically it is just a task manager, like Makefile or Ant. There is
+  use set of plugins available to perform many operations. Grunt will compile your source files into
+  testable website and will prepare the file for the release package.
 
 More information
 ----------------
 
+* http://nodejs.org/
+* http://bower.io/
 * http://gruntjs.com/getting-started
 
 Technologies
@@ -54,8 +57,8 @@ It is a real paradox that there are so many languages that needs to fill the lac
 javascripts. These three are used in **every** modern web browser, yet they are not suited for web
 development (so on the developer side).
 
-File formats
-************
+Main File formats
+*****************
 
 From my humble web 2.0 experience I choose the following technologies:
 
@@ -64,7 +67,7 @@ From my humble web 2.0 experience I choose the following technologies:
   This source file compiles to CSS file. I clearly prefere CSS over concurent solution like SCSS, it
   is less powerful, but powerful enough, and doesn't repends on Ruby environment.
 
-  Reference: http://lesscss.org/
+  **Reference**: http://lesscss.org/
 
 **CoffeeScript**
 
@@ -72,26 +75,29 @@ From my humble web 2.0 experience I choose the following technologies:
   JavaScript). Even if I am not completely fan of CoffeeScript syntax (I hate the definition syntax
   for a method, it far from being intuitive), but, it is still better than bare JavaScript.
 
-  Reference: http://coffeescript.org/
+  **Reference**: http://coffeescript.org/
 
 **Jade**
 
   This is compiled into Html page. It is a simple template system than mainly binds HTML tags
   without complex HTML closing tags and hides all the verbosity of the HTML/XML format.
 
-  Reference: http://jade-lang.com/
+  **Reference**: http://jade-lang.com/
 
 All these files are managed though the ``grunt`` building tool. Of course, ``npm``/``nodejs`` is
 nearby, but ony in the installation process.
 
-Other file format:
+Other file format
+*****************
 
 **reStructuredText**
 
   Forget about using the the flawed Markdown format for writing your formatted text documents. Every
-  implementations has its own interpretation, leading to a format with almost no standart.
-  ``reStructuredText`` defines a proper standart for basic formatting a clean extention mecanisms
-  for other parser to add more feature (such as ``sphinx-builder`` documentation system).
+  implementation is different, leading to a format with almost no standart. How can we hate IE6 so
+  much and still use a bad file format such as Markdown ?
+
+  ``reStructuredText`` defines a proper standart for basic text formatting a clean extention
+  mecanisms for other parser to add more features (such as ``sphinx-builder`` documentation system).
 
 Building Overview
 -----------------
@@ -230,11 +236,11 @@ Development process
 ===================
 
 Use the ``[win|lin]-dev-build.[bat|sh]`` script to build the environment. If you want to inspect
-your change in a web browser, I advise to use ``[win|lin]-dev-serve.[bat|sh]``. It will starts a
+your change in a web browser, I advise to use ``[win|lin]-dev-serve.[bat|sh]``. It will start a
 small web server and open you browser to the ``http://localhost:9000`` URL, where you can test the
 changes in live.
 
-TODO: I'd like to add LiveReload support to this web page.
+**TODO**: I'd like to add LiveReload support to this web page.
 
 Unit testing
 ************
@@ -258,7 +264,7 @@ This project has been started by a squeleton built by Yeoman, using ``generator-
 
 This generated the main ``packages.json``, ``grunt.json`` and the directory structure.
 
-References:
+**References**:
 
 * http://cnpmjs.org/package/generator-jabl
 
