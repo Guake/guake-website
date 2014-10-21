@@ -134,7 +134,8 @@ The Web components used in this projects
 
 **jquery-scrolldeck**
 
-  Simpler and powerful animation scrolling framework.
+  Simpler and powerful animation scrolling framework. It is a pretty old library, and seems only
+  compatible with ``jquery-1.8.2``.
 
   Reference: http://johnpolacek.github.io/scrolldeck.js/
 
@@ -143,7 +144,13 @@ The Web components used in this projects
 
 **jquery.easing**
 
-  Smooth movements on CSS events.
+  Smooth movements on CSS events (imported by ``jquery-scrolldeck``)
+
+  Reference: http://gsgd.co.uk/sandbox/jquery/easing/
+
+**jquery**
+
+  The famous jquery library (imported by ``jquery-scrolldeck``)
 
   Reference: http://gsgd.co.uk/sandbox/jquery/easing/
 
