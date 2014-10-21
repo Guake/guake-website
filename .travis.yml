@@ -15,7 +15,9 @@ env:
     - JEKYLL_VERSION: 1.4.1
     - SAUCE_USERNAME: bootstrap
 
-script:
+before_script:
   - grunt --verbose --force
+
+after_script:
   - grunt dev
   - grunt release
