@@ -5,9 +5,7 @@ module.exports = function (grunt) {
         jade: {
             compile: {
                 options: {
-                    data: {
-                        debug: false
-                    }
+                    pretty: true
                 },
                 files: [
                     {
@@ -61,11 +59,27 @@ module.exports = function (grunt) {
             }
         },
         less: {
-            jid: {
+            dev: {
+                options:
+                {
+                    cleancss: false
+                },
                 files: {
                     "public/css/<%= jablConfig.appTitle.camelized %>.css": "src/less/<%= jablConfig.appTitle.camelized %>.less"
                 }
-            }
+            },
+            prod: {
+                options:
+                {
+                    cleancss: true,
+                    report: 'min',
+                    optimization: 1
+                },
+                files: {
+                    "public/css/<%= jablConfig.appTitle.camelized %>.min.css": "src/less/<%= jablConfig.appTitle.camelized %>.less"
+                }
+            },
+
         },
         connect: {
             server:{
@@ -100,15 +114,6 @@ module.exports = function (grunt) {
                 dest: 'public/img/',
                 filter: 'isFile'
               },
-
-              // includes files within path and its sub-directories
-              // {expand: true, src: ['path/**'], dest: 'dest/'},
-
-              // makes all src relative to cwd
-              // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-
-              // flattens results to a single level
-              // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'}
             ]
           },
           deps: {
