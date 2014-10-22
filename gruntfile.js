@@ -60,10 +60,13 @@ module.exports = function (grunt) {
                 globalstrict: false
             }
         },
-        less: {
-            jid: {
+        sass: {
+            dist: {
+              options: {
+                    style: 'expanded'
+                },
                 files: {
-                    "public/css/<%= jablConfig.appTitle.camelized %>.css": "src/less/<%= jablConfig.appTitle.camelized %>.less"
+                    "public/css/<%= jablConfig.appTitle.camelized %>.css": "src/sass/<%= jablConfig.appTitle.camelized %>.sass"
                 }
             }
         },
@@ -164,15 +167,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jade');
-    grunt.loadNpmTasks ('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-sitemap');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     grunt.registerTask('build', ['jade',
                                  'coffee',
-                                 'less',
+                                 'sass',
                                  'copy',
                                  'sitemap',
                                  'jshint:beforeConcat',
