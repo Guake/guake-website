@@ -69,7 +69,11 @@ From my humble web 2.0 experience I choose the following technologies:
   forces us to setup a complete environment, completely different from the current one).
 
   I clearly prefer the ``sass`` syntax, for the lack of curly braces, matching the two other file
-  format syntaxes.
+  format syntaxes. But Sass relies on Ruby, which involves setup up a new environment (web
+  development is already that hard on windows...). But the more important drawback is that the
+  magical *Bootstrap* component cannot be used directly, we need to checkout a Sass port of
+  bootstrap, which requires to patch the libsass configuration and so on. So, to keep things simple,
+  let's stick with ``Less`` for the moment.
 
   **Reference**: http://lesscss.org/
 
@@ -130,6 +134,9 @@ The Web components used in this projects
   with*. Thanks to ``bootstrap`` and its ``normalize.css``, all these annoying differences are
   abstracted.
 
+  Bootstrap provides a huge bunch of Less files ready to use, with many "mixin" that can be used to
+  create button, navigation bar, menu, good looking and morden widgets.
+
   Reference: http://getbootstrap.com/
 
 **jquery-scrolldeck**
@@ -154,7 +161,7 @@ The Web components used in this projects
 
   Reference: http://gsgd.co.uk/sandbox/jquery/easing/
 
-Other Grunt plugins used
+Other used Grunt plugins
 ************************
 
 **sitemap**
