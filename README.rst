@@ -62,17 +62,16 @@ Main File formats
 
 From my humble web 2.0 experience I choose the following technologies:
 
-**Sass**
+**Less**
 
   This source file compiles to CSS file. I clearly prefere CSS over concurent solution like SCSS, it
   is less powerful, but powerful enough, and doesn't repends on Ruby environment (I hate when a tool
   forces us to setup a complete environment, completely different from the current one).
 
-  This requires to install ruby on Windows plateform, I am sorry for this inconvinience. But the
-  syntax is more powerful than Less, and stay in the same curly brace safe spirit than the next two
-  other file format just bellow (I don't want to use SCSS).
+  I clearly prefer the ``sass`` syntax, for the lack of curly braces, matching the two other file
+  format syntaxes.
 
-  **Reference**: http://sass-lang.com/
+  **Reference**: http://lesscss.org/
 
 **CoffeeScript**
 
@@ -211,11 +210,6 @@ Install the .NET Framework 2.0 SDK
 (seems required to build karma)
 
   http://www.microsoft.com/fr-fr/download/confirmation.aspx?id=19988
-
-Install Ruby
-------------
-
-  http://rubyinstaller.org/
 
 Install grunt and bower
 -----------------------
