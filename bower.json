@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "bootstrap": "~3.2.0",
-    "jquery-scrolldeck": "*"
+    "jquery-scrolldeck": "*",
+    "blueimp-bootstrap-image-gallery": "~3.1.1"
   }
 }

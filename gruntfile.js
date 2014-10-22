@@ -21,7 +21,8 @@ module.exports = function (grunt) {
         concat: {
             deps: {
                 src: [
-                    'public/js/<%= jablConfig.appTitle.camelized %>-cs.js'
+                    'public/js/<%= jablConfig.appTitle.camelized %>-cs.js',
+                    'public/js/extra.js'
                 ],
                 dest: 'public/js/<%= jablConfig.appTitle.camelized %>.js'
             }
@@ -110,13 +111,24 @@ module.exports = function (grunt) {
                 expand: true,
                 nonull: true,
                 flatten: true,
-                src: ['src/img/*'],
+                src: ['src/img/*',
+                      'public/bower/blueimp-gallery/img/*.*',
+                      'public/bower/blueimp-bootstrap-image-gallery/img/*.*'
+                     ],
                 dest: 'public/img/',
+                filter: 'isFile'
+              },
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['src/js/*'],
+                dest: 'public/js/',
                 filter: 'isFile'
               },
             ]
           },
-          deps: {
+          js: {
             files: [
               {
                 expand: true,
@@ -128,9 +140,38 @@ module.exports = function (grunt) {
                       'public/bower/jquery-scrolldeck/js/jquery.scrollTo-1.4.3.1.min.js',
                       'public/bower/jquery-scrolldeck/js/jquery.scrollorama.js',
                       'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js',
-                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js'
+                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
+                      'public/bower/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery*.js',
+                      'public/bower/blueimp-gallery/js/blueimp-gallery*.js'
                       ],
                 dest: 'public/js/',
+                filter: 'isFile'
+              },
+            ]
+          },
+          css: {
+            files: [
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['public/bower/blueimp-gallery/css/blueimp-gallery*.css',
+                      'public/bower/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery*.css'
+                      ],
+                dest: 'public/css/',
+                filter: 'isFile'
+              },
+            ]
+          },
+          fonts: {
+            files: [
+              {
+                expand: true,
+                nonull: true,
+                flatten: true,
+                src: ['public/bower/bootstrap/fonts/glyphicons-halflings-regular.woff',
+                      ],
+                dest: 'public/fonts/',
                 filter: 'isFile'
               },
             ]

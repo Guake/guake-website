@@ -11,54 +11,114 @@ block content
                         p.intro-text
                             p An advanced but simple top-down terminal for the GNOME desktop
                         .page-scroll
-                            a.btn.btn-circle(href='#info')
+                            a.btn.btn-circle(href='#info1')
                                 i.fa.fa-angle-double-down.animated
 
-    section#info.slide
+    section#info1.slide
         .col-lg-8.col-lg-offset-2
 
-            h1(class="animate-in" data-animation="space-in") What is Guake?
+            h1.animate-in(data-animation="space-in")
+                | What is Guake?
 
-            p(class="animate-in" data-animation="fade-in")
-                | Guake is a top-down terminal for Gnome, in the style of Yakuake for KDE, Tilda or the
-                | terminal used in Quake.
+            p.animate-build(data-animation="fade-in" data-build="1")
+                | Guake is a top-down terminal for Gnome, and is highly inspirated by the
+                | terminal used in Quake <i class=glyphicon-copyright-mark></i>.
 
-            p(class="animate-in" data-animation="fade-in")
+            p.animate-build(data-animation="fade-in" data-build="2")
+                | You may need direct access to the console
+                | to execute a command and then go back to your workflow.
+
+            p.animate-build(data-animation="fade-in" data-build="3")
                 | You can check the screenshots to get a small feeling about it.
 
-            h1(class="animate-in" data-animation="space-in") How to get it?
+            .page-scroll.animate-in
+                a.btn.btn-circle(href='#info2')
+                    i.fa.fa-angle-double-down.animated
 
-            p(class="animate-in" data-animation="fade-in")
+    section#info2.slide
+        .col-lg-8.col-lg-offset-2
+
+            h1.animate-in(data-animation="space-in" data-build="1")
+                | How to I get it?
+
+            p.animate-build(data-animation="fade-in" data-build="2")
                 | Guake is packaged by a large number of distributions, among which are Fedora, Debian,
-                | Ubuntu or ArchLinux, so please check your repo. Source tarballs are available; see the
+                | Ubuntu and ArchLinux, so please check your repo. Source tarballs are available; see the
                 | Downloads page.
 
-            h1(class="animate-in" data-animation="space-in") Reporting bugs
+            p.animate-build(data-animation="fade-in" data-build="3")
+                | You can also checkout directly the course code from the
+                | git repository. Please check it<i.fa.fa-github>
+                | <a href="https://github.com/Guake/guake">at the Github page</a>
 
-            p(class="animate-in" data-animation="fade-in")
-                | Oh the bugs. Report 'em all! To file a bug report, use this link. Though you have to register and
-                | login first.
+            .page-scroll.animate-in
+                a.btn.btn-circle(href='#info3')
+                    i.fa.fa-angle-double-down.animated
 
-            h1(class="animate-in" data-animation="space-in") Hacking
+    section#info3.slide
+        .col-lg-8.col-lg-offset-2
 
-            p(class="animate-in" data-animation="fade-in")
-                | If you starve to add a feature to Guake, head to the GoingFurther page. Some knowledge of Python, git
-                | and GTK is all what you need.
+            h1.animate-in(data-animation="space-in" data-build="1")
+                | Reporting bugs
 
-            h1(class="animate-in" data-animation="space-in") Frequently Asked questions
+            p.animate-build(data-animation="fade-in" data-build="2")
+                | Oh the bugs. Report 'em all! To file a bug report, use
+                | <a href="https://github.com/Guake/guake/issues">the Issues
+                | page of the GitHub project</a>.
 
-            p(class="animate-in" data-animation="fade-in") You can also find some notes on the Frequently Asked Questions page. In case of troubles, drop us a letter.
+            .page-scroll.animate-in
+                a.btn.btn-circle(href='#info4')
+                    i.fa.fa-angle-double-down.animated
 
-            .page-scroll
+    section#info4.slide
+        .col-lg-8.col-lg-offset-2
+
+            h1.animate-in(data-animation="space-in" data-build="1")
+                | Hacking
+
+            p.animate-build(data-animation="fade-in" data-build="2")
+                | If you starve to add a feature to Guake, head to the
+                | <a href="https://github.com/Guake/guake/">GitHub page</a>.
+                | Some knowledges of Python, git and GTK is all what you need.
+
+            p.animate-build(data-animation="fade-in" data-build="3")
+                | Please read the
+                | <a href="https://github.com/Guake/guake/blob/master/README.rst">README</a>
+                | file of the project, you may find a lot of the anwser to your questions.
+
+            p.animate-build(data-animation="fade-in" data-build="4")
+                | Do not hesitate to open bugs in the
+                | <a href="https://github.com/Guake/guake/issues">Issue page</a>
+                | to track your request.
+
+            p.animate-build(data-animation="fade-in" data-build="5")
+                | Once you have your patch ready, use the
+                | <a href="https://help.github.com/articles/using-pull-requests/">Pull Requests feature</a>
+                | of GitHub. Please submit it at
+                | <a href="https://github.com/Guake/guake/pulls">this page</a>.
+
+            .page-scroll.animate-in
                 a.btn.btn-circle(href='#screenshots')
                     i.fa.fa-angle-double-down.animated
 
     section#screenshots.slide
         .col-lg-8.col-lg-offset-2
-            h1 Screenshots
-                .page-scroll
-                    a.btn.btn-circle(href='#distribution')
-                        i.fa.fa-angle-double-down.animated
+            p
+                | how about seeing some
+                | <strong class="animate-in" data-animation="space-in">screenshots ?</strong>
+
+            <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+            <div id="blueimp-image-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="play-pause"></a>
+            </div>
+
+            .page-scroll
+                a.btn.btn-circle(href='#distribution')
+                    i.fa.fa-angle-double-down.animated
 
     section#distribution.slide
         .distribution-section
@@ -77,9 +137,10 @@ block content
 
                     h2 Gentoo
                     p emerge -av guake
-                    .page-scroll
-                        a.btn.btn-circle(href='#sources')
-                            i.fa.fa-angle-double-down.animated
+
+            .page-scroll
+                a.btn.btn-circle(href='#sources')
+                    i.fa.fa-angle-double-down.animated
 
     section#sources.slide
             .download-section
@@ -97,34 +158,6 @@ block content
                                     i.fa.fa-github.fa-fw
                                     span.network-name
                                         | Visit the Github project page
-
-                        .page-scroll
-                            a.btn.btn-circle(href='#faq')
-                                i.fa.fa-angle-double-down.animated
-
-    section#faq.slide
-        .col-lg-8.col-lg-offset-2
-            h1 Frequently Asked Questions
-
-            h2 Problem with gconf schema?
-
-            p (Extraced from the README)
-            p If you receive a message asking you if you have installed guake.schemas properly when launching guake, the first question is:
-            p Did you install it ?
-
-            p If no then you might want to do so. You can install the gconf schemas file by hand doing the following:
-
-            p # gconftool-2 --makefile-install-rule data/guake.schemas
-
-            p For more install details, please read the INSTALL file.
-
-            p If the problem persists, it means that your default sysconfdir is different from the one choosen by autotools. To fix that, you probably have to append the param `--sysconfdir=/etc' to your `./configure' call, like this:
-
-            p $ ./configure --sysconfidir=/etc
-
-            p Then you can restart the compilation as before
-
-            p $ make
 
             .page-scroll
                 a.btn.btn-circle(href='#intro')

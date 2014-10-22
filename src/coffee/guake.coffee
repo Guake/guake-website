@@ -2,8 +2,12 @@
 $(window).scroll ->
     if $(".navbar").offset().top > 50
         $(".navbar-fixed-top").addClass "top-nav-collapse"
+        $(".github-ribbon a img").removeClass "github-ribbon-top"
+        $(".github-ribbon a img").addClass "github-ribbon"
     else
         $(".navbar-fixed-top").removeClass "top-nav-collapse"
+        $(".github-ribbon a img").removeClass "github-ribbon"
+        $(".github-ribbon a img").addClass "github-ribbon-top"
     return
 
 #jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -25,12 +29,21 @@ $(document).ready ->
        RepositionNav()
        return
 
+    ###
+    blueimp.Gallery(
+        document.getElementById('links').getElementsByTagName('a'),
+        {
+            container: '#blueimp-gallery-carousel',
+            carousel: true
+        }
+    );###
+
     #.parallax(xPosition, adjuster, inertia, outerHeight) options:
     #xPosition - Horizontal position of the element
     #adjuster - y position to start from
     #inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
     #outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-    ######$('#intro').parallax(0, 900, 0.2, false);
+    $('#intro').parallax(0, 900, 0.2, false);
     #$('#sources').parallax(0, 2000, 0.4, true);
     deck = new $.scrolldeck({
         slides: ".slide",
