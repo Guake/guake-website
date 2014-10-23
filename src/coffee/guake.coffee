@@ -2,12 +2,14 @@
 $(window).scroll ->
     if $(".navbar").offset().top > 50
         $(".navbar-fixed-top").addClass "top-nav-collapse"
-        $(".github-ribbon a img").removeClass "github-ribbon-top"
-        $(".github-ribbon a img").addClass "github-ribbon"
+        #$(".github-ribbon a img").removeClass "github-ribbon-top"
+        #$(".github-ribbon a img").addClass "github-ribbon"
+        $( ".github-ribbon a img" ).fadeIn "slow", "swing"
     else
         $(".navbar-fixed-top").removeClass "top-nav-collapse"
-        $(".github-ribbon a img").removeClass "github-ribbon"
-        $(".github-ribbon a img").addClass "github-ribbon-top"
+        $( ".github-ribbon a img" ).fadeOut "slow", "swing"
+        #$(".github-ribbon a img").removeClass "github-ribbon"
+        #$(".github-ribbon a img").addClass "github-ribbon-top"
     return
 
 #jQuery for page scrolling feature - requires jQuery Easing plugin
