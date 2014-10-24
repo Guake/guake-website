@@ -72,6 +72,7 @@ a:focus {
 
  // Navigation
 
+// on small screen (width < 720)
  .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -79,7 +80,7 @@ a:focus {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: @background;
     padding-left: 30px;
-    padding-right:150px;
+    padding-right: 15px;
 }
 
 .navbar-brand {
@@ -399,8 +400,7 @@ body {
     position: relative;
     margin: 0px;
     width: 100%;
-    height: 50rem;
-    padding: 10rem 0px 20rem;
+    padding: 10rem 0px 10rem;
     text-align: center;
 }
 
@@ -412,69 +412,98 @@ body {
     height: 1000px;
 }
 
+
 #info1{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
+}
+
+@media(min-width:767px) {
+    #info1{
+        padding: 30rem 0rem 30rem;
+    }
 }
 
 #info2{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
+}
+
+@media(min-width:767px) {
+    #info2{
+        padding: 30rem 0rem 30rem;
+    }
 }
 
 #info3{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
+}
+@media(min-width:767px) {
+    #info3{
+        padding: 30rem 0rem 30rem;
+    }
 }
 
 #info4{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
 }
 
+@media(min-width:767px) {
+    #info4{
+        padding: 30rem 0rem 30rem;
+    }
+}
 
 #screenshots{
-    padding: 10rem 0px 100rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
     background: red;
+    height: 800px;
 }
 
+@media(min-width:767px) {
+    #screenshots{
+        padding: 15rem 0rem 50rem;
+    }
+}
 #screenshots strong {
     display: block;
-    font-size: 10rem;
+    font-size: 5rem;
     font-style: italic;
     //position: relative;
-    top: 0.6rem;
+    //top: 0.6rem;
+    padding-bottom: 5rem;
 }
 
-#screenshots strong#question-mark {
-    display: block;
-    font-size: 10rem;
-    font-style: italic;
-    //position: relative;
-    top: 0.6rem;
+@media(min-width:767px) {
+    #screenshots strong{
+        font-size: 10rem;
+    }
 }
 
 #distributions{
     //position: absolute;
     //top: 2000px;
-    padding: 30rem 0px 100rem;
+    padding: 10rem 0px 20rem;
     font-weight: 400;
     font-size: 3.6rem;
     background: violet;
+}
+@media(min-width:767px) {
+    #screenshots strong{
+        padding: 30rem 0px 50rem;
+    }
 }
 
 #sources{
