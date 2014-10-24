@@ -128,7 +128,9 @@ The Web components used in this projects
 **bootstrap**
 
   The famous framework from Twitter. It hides all complexity over the responsiveness stuff a modern
-  website needs to respect in order to run seamlessly on PC, mobile, and any other devices.
+  website needs to respect in order to run seamlessly on PC, mobile, and any other devices. It
+  provides the default behavior of a responsive website, ie when displayed on a small display the
+  menu is different than when on a large screen for example.
 
   It also deals with all the differences between web browser I, as a developer, *do NOT want to deal
   with*. Thanks to ``bootstrap`` and its ``normalize.css``, all these annoying differences are
