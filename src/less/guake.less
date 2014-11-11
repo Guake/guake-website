@@ -34,9 +34,10 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Exo",sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
 }
 
 p {
@@ -151,11 +152,11 @@ a:focus {
     text-align: center;
     color: @foreground;
     background-color: @background;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     background: url(../img/intro-bg.jpg) no-repeat top left fixed;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
 }
 
 .intro-body {
@@ -164,7 +165,9 @@ a:focus {
 }
 
 .brand-heading {
-    font-size: 40px;
+    font-family: "Exo",sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
+    letter-spacing: 1px;
 }
 
 .intro-text {
@@ -178,7 +181,7 @@ a:focus {
     }
 
     .brand-heading {
-        font-size: 100px;
+        font-size: 10rem;
     }
 
     .intro-text {
@@ -499,6 +502,7 @@ body {
     font-weight: 400;
     font-size: 3.6rem;
     background: violet;
+    background-size: cover !important;
 }
 @media(min-width:767px) {
     #screenshots strong{
