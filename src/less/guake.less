@@ -34,9 +34,10 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Exo",sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
 }
 
 p {
@@ -72,6 +73,7 @@ a:focus {
 
  // Navigation
 
+// on small screen (width < 720)
  .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -79,7 +81,7 @@ a:focus {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: @background;
     padding-left: 30px;
-    padding-right:150px;
+    padding-right: 15px;
 }
 
 .navbar-brand {
@@ -150,11 +152,11 @@ a:focus {
     text-align: center;
     color: @foreground;
     background-color: @background;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     background: url(../img/intro-bg.jpg) no-repeat top left fixed;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
 }
 
 .intro-body {
@@ -163,7 +165,9 @@ a:focus {
 }
 
 .brand-heading {
-    font-size: 40px;
+    font-family: "Exo",sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
+    letter-spacing: 1px;
 }
 
 .intro-text {
@@ -177,7 +181,7 @@ a:focus {
     }
 
     .brand-heading {
-        font-size: 100px;
+        font-size: 10rem;
     }
 
     .intro-text {
@@ -283,7 +287,7 @@ a:focus {
 
 .distribution-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 200px 0;
     color: @foreground;
     background: url(../img/screenshot.png) no-repeat center center scroll;
     background-color: @background;
@@ -399,82 +403,111 @@ body {
     position: relative;
     margin: 0px;
     width: 100%;
-    height: 50rem;
-    padding: 10rem 0px 20rem;
+    padding: 10rem 0px 10rem;
     text-align: center;
 }
 
 #intro {
     top: 0px;
-    padding: 15rem 0px 20rem;
+    padding: 0rem 0px 20rem;
     font-weight: 400;
     font-size: 3.6rem;
     height: 1000px;
 }
 
+
 #info1{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
+}
+
+@media(min-width:767px) {
+    #info1{
+        padding: 30rem 0rem 30rem;
+    }
 }
 
 #info2{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
+}
+
+@media(min-width:767px) {
+    #info2{
+        padding: 30rem 0rem 30rem;
+    }
 }
 
 #info3{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
+}
+@media(min-width:767px) {
+    #info3{
+        padding: 30rem 0rem 30rem;
+    }
 }
 
 #info4{
-    padding: 30rem 0px 30rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    height: 1000px;
     background: green;
 }
 
+@media(min-width:767px) {
+    #info4{
+        padding: 30rem 0rem 30rem;
+    }
+}
 
 #screenshots{
-    padding: 10rem 0px 100rem;
+    padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
     background: red;
+    height: 800px;
 }
 
+@media(min-width:767px) {
+    #screenshots{
+        padding: 15rem 0rem 50rem;
+    }
+}
 #screenshots strong {
     display: block;
-    font-size: 10rem;
+    font-size: 5rem;
     font-style: italic;
     //position: relative;
-    top: 0.6rem;
+    //top: 0.6rem;
+    padding-bottom: 5rem;
 }
 
-#screenshots strong#question-mark {
-    display: block;
-    font-size: 10rem;
-    font-style: italic;
-    //position: relative;
-    top: 0.6rem;
+@media(min-width:767px) {
+    #screenshots strong{
+        font-size: 10rem;
+    }
 }
 
 #distributions{
     //position: absolute;
     //top: 2000px;
-    padding: 30rem 0px 100rem;
+    padding: 10rem 0px 20rem;
     font-weight: 400;
     font-size: 3.6rem;
     background: violet;
+    background-size: cover !important;
+}
+@media(min-width:767px) {
+    #screenshots strong{
+        padding: 30rem 0px 50rem;
+    }
 }
 
 #sources{
