@@ -1,9 +1,9 @@
-=========================
-Guake.org Web site source
-=========================
+=====================
+Guake Web site source
+=====================
 
 
-This repository contains the source code of the guake.org web site
+This repository contains the source code of the Guake web site
 
 Introduction
 ============
