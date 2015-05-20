@@ -13,7 +13,7 @@
     carousel: true
     });
 });*/
-
+/*
 $(function () {
     'use strict';
 
@@ -98,3 +98,4 @@ $(function () {
     });
 
 });
+*/

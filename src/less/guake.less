@@ -4,9 +4,9 @@
 // Add your custom styles right here...
 // Variables
 
-@primary: #28c3ab;
-@background: #000;
-@foreground: #fff;
+@primary: #B46B1C;
+@background: #EDEDED;
+@foreground: #000000;
 
 // LESS
 
@@ -152,7 +152,7 @@ a:focus {
     text-align: center;
     color: @foreground;
     background-color: @background;
-    background: url(../img/intro-bg.jpg) no-repeat top left fixed;
+    background: url(../img/intro-bg.png) no-repeat top left fixed;
     background-size: cover !important;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
@@ -408,7 +408,7 @@ body {
 }
 
 #intro {
-    top: 0px;
+    /*top: 0px;*/
     padding: 0rem 0px 20rem;
     font-weight: 400;
     font-size: 3.6rem;
@@ -420,12 +420,13 @@ body {
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    background: green;
+    background: @background;
+    height: 800px;
 }
 
 @media(min-width:767px) {
     #info1{
-        padding: 30rem 0rem 30rem;
+        padding: 20rem 0rem 20rem;
     }
 }
 
@@ -433,12 +434,13 @@ body {
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    background: green;
+    background: @background;
+    height: 800px;
 }
 
 @media(min-width:767px) {
     #info2{
-        padding: 30rem 0rem 30rem;
+        padding: 10rem 0rem 20rem;
     }
 }
 
@@ -446,11 +448,13 @@ body {
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    background: green;
+    background: @background;
+    height: 900px;
 }
+
 @media(min-width:767px) {
     #info3{
-        padding: 30rem 0rem 30rem;
+        padding: 25rem 0rem 25rem;
     }
 }
 
@@ -458,12 +462,12 @@ body {
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    background: green;
+    background: @background;
 }
 
 @media(min-width:767px) {
     #info4{
-        padding: 30rem 0rem 30rem;
+        padding: 10rem 0rem 30rem;
     }
 }
 
@@ -471,8 +475,8 @@ body {
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    background: red;
-    height: 800px;
+    background: @background;
+    height: 900px;
 }
 
 @media(min-width:767px) {
@@ -516,7 +520,7 @@ body {
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
-    background: lightgreen;
+    background: @background;
 }
 
 .github-ribbon-top{
@@ -540,4 +544,20 @@ body {
 
 .navbar-nav{
     font-size: 1.2rem;
+}
+
+.img-screenshot{
+    width: 700px;
+    height: 437px;
+}
+
+.screenshot-legend{
+    margin-top: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.screenshot-description{
+    font-size: 0.6em;
+    font-weight: normal;
 }
