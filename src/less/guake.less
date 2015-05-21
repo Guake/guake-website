@@ -152,11 +152,11 @@ a:focus {
     text-align: center;
     color: @foreground;
     background-color: @background;
-    background: url(../img/intro-bg.png) no-repeat top left fixed;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
+    background: url(../img/intro.jpg) no-repeat center center;
+    background-size: contain !important;
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
 }
 
 .intro-body {
@@ -277,7 +277,9 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: @foreground;
-    background: url(../img/intro-bg.jpg) no-repeat top left scroll;
+    background: url(../img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-color: @background;
     -webkit-background-size: cover;
     -moz-background-size: cover;
