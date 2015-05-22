@@ -96,6 +96,10 @@ a:focus {
     color: @foreground;
 }
 
+.navbar-brand i {
+    margin-right: 5px;
+}
+
 .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -424,7 +428,7 @@ body {
 }
 
 
-#info1{
+#what{
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
@@ -433,12 +437,12 @@ body {
 }
 
 @media(min-width:767px) {
-    #info1{
-        padding: 20rem 0rem 20rem;
+    #what{
+        padding: 10rem 0rem 10rem;
     }
 }
 
-#info2{
+#firstlook{
     padding: 15rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
@@ -447,13 +451,27 @@ body {
 }
 
 @media(min-width:767px) {
-    #info2{
-        padding: 10rem 0rem 20rem;
+    #firstlook{
+        padding: 10rem 0rem 10rem;
     }
 }
 
-#info3{
+#more{
     padding: 15rem 0px 5rem;
+    font-weight: 400;
+    font-size: 3.6rem;
+    background: @background;
+    height: 800px;
+}
+
+@media(min-width:767px) {
+    #more{
+        padding: 10rem 0rem 10rem;
+    }
+}
+
+#get{
+    padding: 5rem 0px 5rem;
     font-weight: 400;
     font-size: 3.6rem;
     background: @background;
@@ -461,8 +479,8 @@ body {
 }
 
 @media(min-width:767px) {
-    #info3{
-        padding: 25rem 0rem 25rem;
+    #get{
+        padding: 15rem 0rem 15rem;
     }
 }
 
@@ -555,8 +573,10 @@ body {
 }
 
 .img-screenshot{
-    width: 700px;
-    height: 437px;
+//     width: 700px;
+//     height: 437px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .screenshot-legend{
@@ -574,4 +594,9 @@ body {
     .container {
         width: 100%;
     }
+}
+
+.feature-ul{
+    font-size: 0.65em;
+    list-style: none;
 }

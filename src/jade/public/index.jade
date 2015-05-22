@@ -10,10 +10,10 @@ block content
             //-     p.intro-text
             //-         p Advanced Top-Down Terminal for the GNOME Desktop
             //-     .page-scroll
-            //-         a.btn.btn-circle(href='#info1')
+            //-         a.btn.btn-circle(href='#what')
             //-             i.fa.fa-angle-double-down.animated
 
-    section#info1.slide
+    section#what.slide
         .col-lg-8.col-lg-offset-2
 
             h1.animate-in(data-animation="space-in")
@@ -29,19 +29,20 @@ block content
                 | workflow.
 
             .page-scroll.animate-build(data-animation="fade-in" data-build="3")
-                a.btn.btn-circle(href='#info2')
+                #what-hook
+                a.btn.btn-circle(href='#firstlook-hook')
                     i.fa.fa-angle-double-down.animated
 
 
-    section#info2.slide
+    section#firstlook.slide
         .col-lg-8.col-lg-offset-2
 
             h1.animate-in(data-animation="space-in" data-build="1")
                 | How does Guake look like?
 
-        .col-lg-8.col-lg-offset-2
+        .col-md-12.col-xs-8.col-xs-offset-2.col-md-offset-0
             .row.animate-build(data-animation="fade-in" data-build="2")
-                .col-lg-6
+                .col-xs-12.col-md-offset-1.col-md-5
                     p.screenshot-legend
                         | Your Terminal Anywhere On Your Desktop, Just A Shortcut Away!
 
@@ -49,15 +50,47 @@ block content
                         | Guake appears automatically when you press your magic shortcut. It restores
                         | the focus to your application immediately when your repress this shortcut.
 
-                .col-lg-6
+                .col-xs-12.col-md-5
                     img.img-screenshot(src="img/screenshot-main.gif")
 
             .page-scroll.animate-build(data-animation="fade-in" data-build="3")
-                a.btn.btn-circle(href='#info3')
+                #firstlook-hook
+                a.btn.btn-circle(href='#more-hook')
+                    i.fa.fa-angle-double-down.animated
+
+    section#more.slide
+        .col-lg-8.col-lg-offset-2
+
+            h1.animate-in(data-animation="space-in" data-build="1")
+                | Tell me More!
+
+            ul.feature-ul
+                li.animate-build(data-animation="fade-in" data-build="2")
+                    | Simple Easy, Elegant and Smooth integration of terminal into GNOME
+                li.animate-build(data-animation="fade-in" data-build="3")
+                    | Compiz transparency support
+                li.animate-build(data-animation="fade-in" data-build="4")
+                    | Plenty of color palette
+                li.animate-build(data-animation="fade-in" data-build="5")
+                    | Quick Open in your favorite text editor
+                li.animate-build(data-animation="fade-in" data-build="6")
+                    | Customizable hotkeys for almost everything
+                li.animate-build(data-animation="fade-in" data-build="7")
+                    | Configure Guake startup tabs
+                li.animate-build(data-animation="fade-in" data-build="8")
+                    | Multi-monitor support
+                li.animate-build(data-animation="fade-in" data-build="9")
+                    | Save terminal content to file
+                li.animate-build(data-animation="fade-in" data-build="10")
+                    | Open URL to your browser
+
+            .page-scroll.animate-build(data-animation="fade-in" data-build="11")
+                #more-hook
+                a.btn.btn-circle(href='#get-hook')
                     i.fa.fa-angle-double-down.animated
 
 
-    section#info3.slide
+    section#get.slide
         .col-lg-8.col-lg-offset-2
 
             h1.animate-in(data-animation="space-in" data-build="1")
@@ -80,7 +113,8 @@ block content
                 | page of the GitHub project</a>.
 
             .page-scroll.animate-build(data-animation="fade-in" data-build="5")
-                a.btn.btn-circle(href='#info4')
+                #get-hook
+                a.btn.btn-circle(href='#screenshots-hook')
                     i.fa.fa-angle-double-down.animated
 
 
@@ -108,7 +142,8 @@ block content
                 //-         img(src="img/screenshot-main.gif" alt="Banana")
 
             .page-scroll.animate-build(data-animation="fade-in" data-build="2")
-                a.btn.btn-circle(href='#sources')
+                #screenshot-hook
+                a.btn.btn-circle(href='#sources-hook')
                     i.fa.fa-angle-double-down.animated
 
     section#sources.slide
@@ -129,5 +164,6 @@ block content
                                         | Visit the Github project page
 
             .page-scroll
+                #sources-hook
                 a.btn.btn-circle(href='#intro')
                     i.fa.fa-angle-double-up.animated
