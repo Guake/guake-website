@@ -152,12 +152,19 @@ a:focus {
     text-align: center;
     color: @foreground;
     background-color: @background;
-    background: url(../img/intro.jpg) no-repeat center center;
+    background: url(../img/intro.jpg) no-repeat center top;
     background-size: contain !important;
     -webkit-background-size: contain !important;
     -moz-background-size: contain !important;
     -o-background-size: contain !important;
 }
+
+@media (max-width: 767px) {
+    #intro {
+        margin-top: 50px;
+    }
+}
+
 
 .intro-body {
     display: table-cell;
@@ -562,4 +569,10 @@ body {
 .screenshot-description{
     font-size: 0.6em;
     font-weight: normal;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
 }
