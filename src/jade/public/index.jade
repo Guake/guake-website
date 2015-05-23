@@ -86,8 +86,25 @@ block content
                             //-     | Guake appears automatically when you press your magic shortcut. It restores
                             //-     | the focus to your application immediately when your repress this shortcut.
 
+                            a.btn(data-toggle="modal", href="#myModal") Launch
+                            .modal.hide#myModal
+                                .modal-header
+                                    button(type="button", class="close", data-dismiss="modal") x
+                                    h3 Modal Header
+                                .modal-body
+                                    p One fine body...
+                                .modal-footer
+
                         .col-xs-12.col-md-5
-                            img.img-screenshot(src="img/screenshot-main.gif")
+                            a(data-toggle="lightbox" href="#demoLightbox")
+                                img.img-screenshot(src="img/screenshot-main.gif" data-toggle="lightbox")
+                            #demoLightbox.lightbox.hide.fade(tabindex="-1" role="dialog" aria-hidden="true")
+                                .lightbox-dialog
+                                    .lightbox-content
+                                        img.img-screenshot(src="img/screenshot-main.gif")
+                                        .lightbox-caption
+                                            Your caption here
+                                            .modal.fade
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="3")
                     #firstlook-hook
@@ -100,7 +117,7 @@ block content
                 .col-xs-12
                     h1.animate-in(data-animation="space-in" data-build="1")#scale-animation
                         | Tell me More!
-            .row
+            .row.feature-list
                 //- .col-lg-8.col-lg-offset-2#scale-trigger
 
                 //-     ul.feature-ul
@@ -122,9 +139,34 @@ block content
                 //-             | Save terminal content to file
                 //-         li.animate-build(data-animation="fade-in" data-build="10")
                 //-             | Open URL to your browser
-                .col-xs-4
-                .col-xs-4
-                .col-xs-4
+                .col-xs-6.col-md-4
+                    h3 Simple Easy, Elegant
+                    p Smooth integration of terminal into GNOME, with Compiz Transparency
+                .col-xs-6.col-md-4
+                    h3 Multi Tabs
+                    p Get instant access to your tabs with custom shortcut
+                .col-xs-6.col-md-4
+                    h3 Multi Multi-monitor
+                    p Open Guake on the monitor where your mouse is, or in a specific monitor
+                .col-xs-6.col-md-4
+                    h3 Quick Open
+                    p
+                        | See a filename in your terminal output? Simply click on it and it can
+                        | be opened directly if your favorite Text Editor. Even at the line and
+                        | colunm number if your editor support it.
+                .col-xs-6.col-md-4
+                    h3 Autoconfigure Guake
+                    p
+                        | Start Guake automatically at startup, and define a script that will be
+                        | executed on Guake launch, in order to configure Guake tabs.
+                    p
+                        | This is temporary solution waiting for the save session feature.
+
+                .col-xs-6.col-md-4
+                    h3 Plenty of Color palette
+                    p
+                        | More than 130 predefined palettes are provided! You can easilly visualize
+                        | it prior to choosing the color that is best for you.
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="11")
                     #more-hook

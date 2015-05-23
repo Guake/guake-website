@@ -66,7 +66,8 @@ module.exports = function(grunt) {
                     cleancss: false
                 },
                 files: {
-                    "public/css/<%= jablConfig.appTitle.camelized %>.css": "src/less/<%= jablConfig.appTitle.camelized %>.less"
+                    "public/css/<%= jablConfig.appTitle.camelized %>.css": "src/less/<%= jablConfig.appTitle.camelized %>.less",
+                    "public/css/bootstrap-lightbox.css": "public/bower/bootstrap-lightbox/less/bootstrap-lightbox.less"
                 }
             },
             prod: {
@@ -76,7 +77,8 @@ module.exports = function(grunt) {
                     optimization: 1
                 },
                 files: {
-                    "public/css/<%= jablConfig.appTitle.camelized %>.min.css": "src/less/<%= jablConfig.appTitle.camelized %>.less"
+                    "public/css/<%= jablConfig.appTitle.camelized %>.min.css": "src/less/<%= jablConfig.appTitle.camelized %>.less",
+                    "public/css/bootstrap-lightbox.min.css": "public/bower/bootstrap-lightbox/less/bootstrap-lightbox.less"
                 }
             },
 
