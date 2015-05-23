@@ -23,7 +23,7 @@ $ ->
     return
 
 $(document).ready ->
-
+# $( window ).load ->
     #$('nav').localScroll(800);
     # Recalculate for parallax
     RepositionNav()
@@ -32,23 +32,33 @@ $(document).ready ->
        return
 
 
-    ###blueimp.Gallery(
+    # blueimp.Gallery(
+    blueimp.Gallery(
+        # [
+        #     {
+        #         title: 'Banana',
+        #         href: '../img/intro.jpg',
+        #         type: 'image/jpeg',
+        #     }
+        # ],
         document.getElementById('links').getElementsByTagName('a'),
         {
-            container: '#blueimp-gallery-carousel',
-            carousel: false
+            container: '#blueimp-gallery',
+            carousel: true
         }
-    );###
+    )
+    return
+
     # blueimp.Gallery([
-            # {
-                # title: 'Main page',
-                # href: 'img/screenshot-main.gif',
-                # poster: 'img/screenshot-main.gif'
-            # },
-        # ], {
-            # container: '#blueimp-image-carousel',
-            # carousel: false
-        # });
+    #         {
+    #             title: 'Main page',
+    #             href: 'img/screenshot-main.gif',
+    #             poster: 'img/screenshot-main.gif'
+    #         },
+    #     ], {
+    #         container: '#blueimp-gallery',
+    #         carousel: true
+    #     });
 
     #.parallax(xPosition, adjuster, inertia, outerHeight) options:
     #xPosition - Horizontal position of the element
@@ -66,15 +76,15 @@ $(document).ready ->
     # })
 
     # init controller
-    controller = new ScrollMagic.Controller()
-    scale_tween = TweenMax.to('#scale-animation', 1, {
-          transform: 'scale(.75)',
-          ease: Linear.easeNone
-        })
-
-     # create a scene
-    new ScrollMagic.Scene({
-            triggerElement: '#scale-trigger'
-        })
-        .setTween(scale_tween)
-        .addTo(controller) #// assign the scene to the controller
+    # controller = new ScrollMagic.Controller()
+    # scale_tween = TweenMax.to('#scale-animation', 1, {
+    #       transform: 'scale(.75)',
+    #       ease: Linear.easeNone
+    #     })
+    #
+    #  # create a scene
+    # new ScrollMagic.Scene({
+    #         triggerElement: '#scale-trigger'
+    #     })
+    #     .setTween(scale_tween)
+    #     .addTo(controller) #// assign the scene to the controller

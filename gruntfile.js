@@ -202,6 +202,7 @@ module.exports = function(grunt) {
                             // 'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js',
                             'public/bower/bootstrap-lightbox/js/bootstrap-lightbox.js',
                             'public/bower/jquery/dist/jquery.min.js',
+                            'public/bower/jquery/dist/jquery.min.map',
                             'public/bower/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
                             'public/bower/ScrollMagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js',
                             'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',

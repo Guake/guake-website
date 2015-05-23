@@ -86,25 +86,24 @@ block content
                             //-     | Guake appears automatically when you press your magic shortcut. It restores
                             //-     | the focus to your application immediately when your repress this shortcut.
 
-                            a.btn(data-toggle="modal", href="#myModal") Launch
-                            .modal.hide#myModal
-                                .modal-header
-                                    button(type="button", class="close", data-dismiss="modal") x
-                                    h3 Modal Header
-                                .modal-body
-                                    p One fine body...
-                                .modal-footer
+                            //- a.btn(data-toggle="modal", href="#myModal") Launch
+                            //- .modal.hide#myModal
+                            //-     .modal-header
+                            //-         button(type="button", class="close", data-dismiss="modal") x
+                            //-         h3 Modal Header
+                            //-     .modal-body
+                            //-         p One fine body...
+                            //-     .modal-footer
 
                         .col-xs-12.col-md-5
                             a(data-toggle="lightbox" href="#demoLightbox")
-                                img.img-screenshot(src="img/screenshot-main.gif" data-toggle="lightbox")
+                                img.img-screenshot(src="img/screenshot-main.gif")
                             #demoLightbox.lightbox.hide.fade(tabindex="-1" role="dialog" aria-hidden="true")
                                 .lightbox-dialog
                                     .lightbox-content
-                                        img.img-screenshot(src="img/screenshot-main.gif")
+                                        img(src="img/screenshot-main.gif")
                                         .lightbox-caption
                                             Your caption here
-                                            .modal.fade
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="3")
                     #firstlook-hook
@@ -183,20 +182,20 @@ block content
 
                     //- <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
                     .animate-build(data-animation="fade-in" data-build="2")
-                        #blueimp-image-carousel.blueimp-gallery.blueimp-gallery-carousel
+                        //- <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+                        #blueimp-gallery.blueimp-gallery.blueimp-gallery-carousel
                             .slides
                             h3.title
                             a.prev
                             a.next
                             a.play-pause
+                            ol.indicator
+                        #links.links
+                            a(href="http://farm6.static.flickr.com/5101/13539971585_6c655628e5_b.jpg" title="La finestra" type="image/jpeg" data-gallery="")
+                            a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
+                            a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
+                            a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
 
-                        //- #links
-                        //-     a(href="img/screenshot-main.gif" title="Banana")
-                        //-         img(src="img/screenshot-main.gif" alt="Banana")
-                        //-     a(href="img/screenshot-main.gif" title="Banana")
-                        //-         img(src="img/screenshot-main.gif" alt="Banana")
-                        //-     a(href="img/screenshot-main.gif" title="Banana")
-                        //-         img(src="img/screenshot-main.gif" alt="Banana")
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="2")
                     #screenshot-hook
