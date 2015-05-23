@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "dependencies": {
     "bootstrap": "~3.3.4",
-    "jquery-scrolldeck": "*",
     "blueimp-bootstrap-image-gallery": "~3.1.1",
-    "grunt": "~0.4.5"
+    "grunt": "~0.4.5",
+    "ScrollMagic": "~2.0.5",
+    "jquery": "~2.1.4",
+    "bootstrap-lightbox": "~0.7.0"
   }
 }

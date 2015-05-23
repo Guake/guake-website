@@ -39,16 +39,16 @@ $(document).ready ->
             carousel: false
         }
     );###
-    blueimp.Gallery([
-        {
-            title: 'Main page',
-            href: 'img/screenshot-main.gif',
-            poster: 'img/screenshot-main.gif'
-        },
-    ], {
-        container: '#blueimp-gallery-carousel',
-        carousel: false
-    });
+    # blueimp.Gallery([
+            # {
+                # title: 'Main page',
+                # href: 'img/screenshot-main.gif',
+                # poster: 'img/screenshot-main.gif'
+            # },
+        # ], {
+            # container: '#blueimp-image-carousel',
+            # carousel: false
+        # });
 
     #.parallax(xPosition, adjuster, inertia, outerHeight) options:
     #xPosition - Horizontal position of the element
@@ -58,10 +58,23 @@ $(document).ready ->
     #$('#intro').parallax(0, 700, 0.2, false);
     #$('#sources').parallax(0, 2000, 0.4, true);
 
-    deck = new $.scrolldeck({
-        slides: ".slide",
-        buttons: "nav li a",
-        easing: "easeInOutExpo",
-        offset: 0,
-    })
-    return
+    # deck = new $.scrolldeck({
+    #     slides: ".slide",
+    #     buttons: "nav li a",
+    #     easing: "easeInOutExpo",
+    #     offset: 0,
+    # })
+
+    # init controller
+    controller = new ScrollMagic.Controller()
+    scale_tween = TweenMax.to('#scale-animation', 1, {
+          transform: 'scale(.75)',
+          ease: Linear.easeNone
+        })
+
+     # create a scene
+    new ScrollMagic.Scene({
+            triggerElement: '#scale-trigger'
+        })
+        .setTween(scale_tween)
+        .addTo(controller) #// assign the scene to the controller

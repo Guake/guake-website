@@ -13,159 +13,203 @@ block content
             //-         a.btn.btn-circle(href='#what')
             //-             i.fa.fa-angle-double-down.animated
 
-    section#overview.slide
+    #overview-carousel.carousel.slide(data-ride="carousel" data-interval="3000")
+        //- <!-- Indicators -->
+        ol.carousel-indicators
+            li.active(data-target="#overview-carousel" data-slide-to="0")
+            li(data-target="#overview-carousel" data-slide-to="1")
+            li(data-target="#overview-carousel" data-slide-to="2")
+
+        //- <!-- Wrapper for slides -->
+        .carousel-inner
+            .item.active(role="listbox")
+                //- img(src="http://placehold.it/1200x315" alt="...")
+                //- .carousel-caption
+                .carousel-content
+                    h3 The Developer's Best Friend
+                    p Instantenously execute any command
+            .item(role="listbox")
+                //- img(src="http://placehold.it/1200x315" alt="...")
+                .carousel-content
+                    h3 Simple and Elegant
+                    p Guake has just the features your need
+            .item(role="listbox")
+                .carousel-content
+                    h3 Direct Access to Any Console
+                    p Switch back and forth between your contexts
+
+        //- <!-- Controls -->
+        a.left.carousel-control(href="#overview-carousel" role="button" data-slide="prev")
+            span.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href="#overview-carousel" role="button" data-slide="next")
+            span.glyphicon.glyphicon-chevron-right
 
     section#what.slide
-        .col-lg-8.col-lg-offset-2
+        .container
+            .row
+                .col-lg-8.col-lg-offset-2
 
-            h1.animate-in(data-animation="space-in")
-                | What is Guake?
+                    h1.animate-in(data-animation="space-in")
+                        | Discover Guake Terminal
 
-            p.animate-build(data-animation="fade-in" data-build="1")
-                | Guake is a top-down terminal for Gnome, and is highly inspirated by the famous
-                | terminal used in Quake <i class="glyphicon glyphicon-copyright-mark"></i>.
+                    p.animate-build(data-animation="fade-in" data-build="1")
+                        | Guake is a top-down terminal for Gnome, and is highly inspirated by the famous
+                        | terminal used in Quake <i class="glyphicon glyphicon-copyright-mark"></i>.
 
-            p.animate-build(data-animation="fade-in" data-build="2")
-                | You instantenously show and hide your terminal with a single key stroke,
-                | execute a command, and then go back to your previous task without breaking your
-                | workflow.
-
-            .page-scroll.animate-build(data-animation="fade-in" data-build="3")
-                #what-hook
-                a.btn.btn-circle(href='#firstlook-hook')
-                    i.fa.fa-angle-double-down.animated
+                    p.animate-build(data-animation="fade-in" data-build="2")
+                        | You instantenously show and hide your terminal with a single key stroke,
+                        | execute a command, and then go back to your previous task without breaking your
+                        | workflow.
+            .row
+                .page-scroll.animate-build(data-animation="fade-in" data-build="3")
+                    #what-hook
+                    a.btn.btn-circle(href='#firstlook')
+                        i.fa.fa-angle-double-down.animated
 
 
     section#firstlook.slide
-        .col-lg-8.col-lg-offset-2
+        .container
+            .row
+                .col-lg-8.col-lg-offset-2
 
-            h1.animate-in(data-animation="space-in" data-build="1")
-                | How does Guake look like?
+                    h1.animate-in(data-animation="space-in" data-build="1")
+                        | How does Guake look like?
 
-        .col-md-12.col-xs-8.col-xs-offset-2.col-md-offset-0
-            .row.animate-build(data-animation="fade-in" data-build="2")
-                .col-xs-12.col-md-offset-1.col-md-5
-                    p.screenshot-legend
-                        | Your Terminal Anywhere On Your Desktop, Just A Shortcut Away!
+            .row
+                .col-md-12.col-xs-8.col-xs-offset-2.col-md-offset-0
+                    .row.animate-build(data-animation="fade-in" data-build="2")
+                        .col-xs-12.col-md-offset-1.col-md-5
+                            p.screenshot-legend
+                                | Your Terminal Anywhere On Your Desktop, Just A Shortcut Away!
 
-                    p.screenshot-description
-                        | Guake appears automatically when you press your magic shortcut. It restores
-                        | the focus to your application immediately when your repress this shortcut.
+                            //- p.screenshot-description
+                            //-     | Guake appears automatically when you press your magic shortcut. It restores
+                            //-     | the focus to your application immediately when your repress this shortcut.
 
-                .col-xs-12.col-md-5
-                    img.img-screenshot(src="img/screenshot-main.gif")
-
-            .page-scroll.animate-build(data-animation="fade-in" data-build="3")
-                #firstlook-hook
-                a.btn.btn-circle(href='#more-hook')
-                    i.fa.fa-angle-double-down.animated
+                        .col-xs-12.col-md-5
+                            img.img-screenshot(src="img/screenshot-main.gif")
+            .row
+                .page-scroll.animate-build(data-animation="fade-in" data-build="3")
+                    #firstlook-hook
+                    a.btn.btn-circle(href='#more')
+                        i.fa.fa-angle-double-down.animated
 
     section#more.slide
-        .col-lg-8.col-lg-offset-2
+        .container
+            .row
+                .col-xs-12
+                    h1.animate-in(data-animation="space-in" data-build="1")#scale-animation
+                        | Tell me More!
+            .row
+                //- .col-lg-8.col-lg-offset-2#scale-trigger
 
-            h1.animate-in(data-animation="space-in" data-build="1")
-                | Tell me More!
+                //-     ul.feature-ul
+                //-         li.animate-build(data-animation="fade-in" data-build="2")
+                //-             | Simple Easy, Elegant and Smooth integration of terminal into GNOME
+                //-         li.animate-build(data-animation="fade-in" data-build="3")
+                //-             | Compiz transparency support
+                //-         li.animate-build(data-animation="fade-in" data-build="4")
+                //-             | Plenty of color palette
+                //-         li.animate-build(data-animation="fade-in" data-build="5")
+                //-             | Quick Open file path in your favorite text editor
+                //-         li.animate-build(data-animation="fade-in" data-build="6")
+                //-             | Customizable hotkeys for almost every action
+                //-         li.animate-build(data-animation="fade-in" data-build="7")
+                //-             | Configure your Tabs at Startup
+                //-         li.animate-build(data-animation="fade-in" data-build="8")
+                //-             | Multi-monitor support
+                //-         li.animate-build(data-animation="fade-in" data-build="9")
+                //-             | Save terminal content to file
+                //-         li.animate-build(data-animation="fade-in" data-build="10")
+                //-             | Open URL to your browser
+                .col-xs-4
+                .col-xs-4
+                .col-xs-4
+            .row
+                .page-scroll.animate-build(data-animation="fade-in" data-build="11")
+                    #more-hook
+                    a.btn.btn-circle(href='#get')
+                        i.fa.fa-angle-double-down.animated
 
-            ul.feature-ul
-                li.animate-build(data-animation="fade-in" data-build="2")
-                    | Simple Easy, Elegant and Smooth integration of terminal into GNOME
-                li.animate-build(data-animation="fade-in" data-build="3")
-                    | Compiz transparency support
-                li.animate-build(data-animation="fade-in" data-build="4")
-                    | Plenty of color palette
-                li.animate-build(data-animation="fade-in" data-build="5")
-                    | Quick Open in your favorite text editor
-                li.animate-build(data-animation="fade-in" data-build="6")
-                    | Customizable hotkeys for almost everything
-                li.animate-build(data-animation="fade-in" data-build="7")
-                    | Configure Guake startup tabs
-                li.animate-build(data-animation="fade-in" data-build="8")
-                    | Multi-monitor support
-                li.animate-build(data-animation="fade-in" data-build="9")
-                    | Save terminal content to file
-                li.animate-build(data-animation="fade-in" data-build="10")
-                    | Open URL to your browser
+    section#screenshots.slide
+        .container
+            .row
+                .col-lg-8.col-lg-offset-2
 
-            .page-scroll.animate-build(data-animation="fade-in" data-build="11")
-                #more-hook
-                a.btn.btn-circle(href='#get-hook')
-                    i.fa.fa-angle-double-down.animated
+                    h1.animate-in(data-animation="space-in" data-build="1")
+                        | See Guake in Action
+
+                    //- <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+                    .animate-build(data-animation="fade-in" data-build="2")
+                        #blueimp-image-carousel.blueimp-gallery.blueimp-gallery-carousel
+                            .slides
+                            h3.title
+                            a.prev
+                            a.next
+                            a.play-pause
+
+                        //- #links
+                        //-     a(href="img/screenshot-main.gif" title="Banana")
+                        //-         img(src="img/screenshot-main.gif" alt="Banana")
+                        //-     a(href="img/screenshot-main.gif" title="Banana")
+                        //-         img(src="img/screenshot-main.gif" alt="Banana")
+                        //-     a(href="img/screenshot-main.gif" title="Banana")
+                        //-         img(src="img/screenshot-main.gif" alt="Banana")
+            .row
+                .page-scroll.animate-build(data-animation="fade-in" data-build="2")
+                    #screenshot-hook
+                    a.btn.btn-circle(href='#sources')
+                        i.fa.fa-angle-double-down.animated
 
 
     section#get.slide
-        .col-lg-8.col-lg-offset-2
+        .container
+            .row
+                .col-lg-8.col-lg-offset-2
 
-            h1.animate-in(data-animation="space-in" data-build="1")
-                | How can I get Guake?
+                    h1.animate-in(data-animation="space-in" data-build="1")
+                        | How can I get Guake?
 
-            p.animate-build(data-animation="fade-in" data-build="2")
-                | Guake is packaged by a large number of distributions, among which are Fedora,
-                | Debian, Ubuntu and ArchLinux, so please check your repo. Source tarballs are
-                | available; see the <a href="https://github.com/Guake/guake/releases">Release
-                | page</a>.
+                    p.animate-build(data-animation="fade-in" data-build="2")
+                        | Guake is packaged by a large number of distributions, among which are Fedora,
+                        | Debian, Ubuntu and ArchLinux, so please check your repo. Source tarballs are
+                        | available; see the <a href="https://github.com/Guake/guake/releases">Release
+                        | page</a>.
 
-            p.animate-build(data-animation="fade-in" data-build="3")
-                | You can also checkout directly the course code from the
-                | git repository. Please check it<i.fa.fa-github>
-                | <a href="https://github.com/Guake/guake">at the Github page</a>
+                    p.animate-build(data-animation="fade-in" data-build="3")
+                        | You can also checkout directly the course code from the
+                        | git repository. Please check it<i.fa.fa-github>
+                        | <a href="https://github.com/Guake/guake">at the Github page</a>
 
-            p.animate-build(data-animation="fade-in" data-build="4")
-                | No software is perfect. To file a bug report, use
-                | <a href="https://github.com/Guake/guake/issues">the Issues
-                | page of the GitHub project</a>.
+                    p.animate-build(data-animation="fade-in" data-build="4")
+                        | No software is perfect. To file a bug report, use
+                        | <a href="https://github.com/Guake/guake/issues">the Issues
+                        | page of the GitHub project</a>.
 
-            .page-scroll.animate-build(data-animation="fade-in" data-build="5")
-                #get-hook
-                a.btn.btn-circle(href='#screenshots-hook')
-                    i.fa.fa-angle-double-down.animated
-
-
-    section#screenshots.slide
-        .col-lg-8.col-lg-offset-2
-
-            h1.animate-in(data-animation="space-in" data-build="1")
-                | See Guake in Action
-
-            //- <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-            .animate-build(data-animation="fade-in" data-build="2")
-                #blueimp-image-carousel.blueimp-gallery.blueimp-gallery-carousel
-                    .slides
-                    h3.title
-                    a.prev
-                    a.next
-                    a.play-pause
-
-                //- #links
-                //-     a(href="img/screenshot-main.gif" title="Banana")
-                //-         img(src="img/screenshot-main.gif" alt="Banana")
-                //-     a(href="img/screenshot-main.gif" title="Banana")
-                //-         img(src="img/screenshot-main.gif" alt="Banana")
-                //-     a(href="img/screenshot-main.gif" title="Banana")
-                //-         img(src="img/screenshot-main.gif" alt="Banana")
-
-            .page-scroll.animate-build(data-animation="fade-in" data-build="2")
-                #screenshot-hook
-                a.btn.btn-circle(href='#sources-hook')
-                    i.fa.fa-angle-double-down.animated
+            .row
+                .page-scroll.animate-build(data-animation="fade-in" data-build="5")
+                    #get-hook
+                    a.btn.btn-circle(href='#screenshots')
+                        i.fa.fa-angle-double-down.animated
 
     section#sources.slide
-            .download-section
-                .container
-                    .col-lg-8.col-lg-offset-2
-                        h1 Compile Guake from sources
-                        p
-                            | General information on how to compile guake can be found in the
-                            | <a href="https://github.com/Guake/guake/blob/master/INSTALL">INSTALL</a>
-                            | file.
+        .download-section
+            .container
+                .col-lg-8.col-lg-offset-2
+                    h1 Compile Guake from sources
+                    p
+                        | General information on how to compile guake can be found in the
+                        | <a href="https://github.com/Guake/guake/blob/master/README.rst">
+                        | README.rst</a> file.
 
-                        ul.list-inline.banner-social-buttons
-                            li
-                                a.btn.btn-default.btn-lg(href='https://github.com/Guake/guake/')
-                                    i.fa.fa-github.fa-fw
-                                    span.network-name
-                                        | Visit the Github project page
+                    ul.list-inline.banner-social-buttons
+                        li
+                            a.btn.btn-default.btn-lg(href='https://github.com/Guake/guake/')
+                                i.fa.fa-github.fa-fw
+                                span.network-name
+                                    | Visit the Github project page
 
-            .page-scroll
-                #sources-hook
-                a.btn.btn-circle(href='#intro')
-                    i.fa.fa-angle-double-up.animated
+        .page-scroll
+            #sources-hook
+            a.btn.btn-circle(href='#top')
+                i.fa.fa-angle-double-up.animated

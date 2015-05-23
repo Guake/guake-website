@@ -105,48 +105,48 @@ module.exports = function(grunt) {
         modernizr: {
             dist: {
                 // [REQUIRED] Path to the build you're using for development.
-                "devFile" : "node_modules/grunt-modernizr/lib/modernizr-dev.js",
+                "devFile": "node_modules/grunt-modernizr/lib/modernizr-dev.js",
 
                 // Path to save out the built file.
-                "outputFile" : "public/js/modernizr-custom.js",
+                "outputFile": "public/js/modernizr-custom.js",
 
                 // Based on default settings on http://modernizr.com/download/
-                "extra" : {
-                    "shiv" : true,
-                    "printshiv" : false,
-                    "load" : true,
-                    "mq" : false,
-                    "cssclasses" : true
+                "extra": {
+                    "shiv": true,
+                    "printshiv": false,
+                    "load": true,
+                    "mq": false,
+                    "cssclasses": true
                 },
 
                 // Based on default settings on http://modernizr.com/download/
-                "extensibility" : {
-                    "addtest" : false,
-                    "prefixed" : false,
-                    "teststyles" : false,
-                    "testprops" : false,
-                    "testallprops" : false,
-                    "hasevents" : false,
-                    "prefixes" : false,
-                    "domprefixes" : false,
+                "extensibility": {
+                    "addtest": false,
+                    "prefixed": false,
+                    "teststyles": false,
+                    "testprops": false,
+                    "testallprops": false,
+                    "hasevents": false,
+                    "prefixes": false,
+                    "domprefixes": false,
                     "cssclassprefix": ""
                 },
 
                 // By default, source is uglified before saving
-                "uglify" : true,
+                "uglify": true,
 
                 // Define any tests you want to implicitly include.
-                "tests" : [],
+                "tests": [],
 
                 // By default, this task will crawl your project for references to Modernizr tests.
                 // Set to false to disable.
-                "parseFiles" : true,
+                "parseFiles": true,
 
                 // When parseFiles = true, this task will crawl all *.js, *.css, *.scss and *.sass files,
                 // except files that are in node_modules/.
                 // You can override this by defining a "files" array below.
                 // "files" : {
-                    // "src": []
+                // "src": []
                 // },
 
                 // This handler will be passed an array of all the test names passed to the Modernizr API, and will run after the API call has returned
@@ -154,10 +154,10 @@ module.exports = function(grunt) {
 
                 // When parseFiles = true, matchCommunityTests = true will attempt to
                 // match user-contributed tests.
-                "matchCommunityTests" : false,
+                "matchCommunityTests": false,
 
                 // Have custom Modernizr tests? Add paths to their location here.
-                "customTests" : []
+                "customTests": []
             }
         },
         copy: {
@@ -191,16 +191,21 @@ module.exports = function(grunt) {
                         expand: true,
                         nonull: true,
                         flatten: true,
-                        src: ['public/bower/bootstrap/dist/js/bootstrap.js',
-                      'public/bower/jquery-scrolldeck/js/jquery-1.8.2.min.js',
-                      'public/bower/jquery-scrolldeck/js/jquery.easing.1.3.js',
-                      'public/bower/jquery-scrolldeck/js/jquery.scrollTo-1.4.3.1.min.js',
-                      'public/bower/jquery-scrolldeck/js/jquery.scrollorama.js',
-                      'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js',
-                      'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
-                      'public/bower/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery*.js',
-                      'public/bower/blueimp-gallery/js/blueimp-gallery*.js'
-                      ],
+                        src: [
+                            'public/bower/bootstrap/dist/js/bootstrap.js',
+                            // 'public/bower/jquery-scrolldeck/js/jquery-1.8.2.min.js',
+                            // 'public/bower/jquery-scrolldeck/js/jquery.easing.1.3.js',
+                            // 'public/bower/jquery-scrolldeck/js/jquery.scrollTo-1.4.3.1.min.js',
+                            // 'public/bower/jquery-scrolldeck/js/jquery.scrollorama.js',
+                            // 'public/bower/jquery-scrolldeck/js/jquery.scrolldeck.js',
+                            'public/bower/bootstrap-lightbox/js/bootstrap-lightbox.js',
+                            'public/bower/jquery/dist/jquery.min.js',
+                            'public/bower/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
+                            'public/bower/ScrollMagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js',
+                            'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
+                            'public/bower/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery*.js',
+                            'public/bower/blueimp-gallery/js/blueimp-gallery*.js'
+                        ],
                         dest: 'public/js/',
                         filter: 'isFile'
               },
