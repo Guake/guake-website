@@ -203,6 +203,7 @@ module.exports = function(grunt) {
                             'public/bower/bootstrap-lightbox/js/bootstrap-lightbox.js',
                             'public/bower/jquery/dist/jquery.min.js',
                             'public/bower/jquery/dist/jquery.min.map',
+                            'public/bower/magnific-popup/dist/*.js',
                             'public/bower/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
                             'public/bower/ScrollMagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js',
                             'public/bower/jquery-scrolldeck/decks/parallax/scripts/jquery.parallax-1.1.js',
@@ -220,9 +221,13 @@ module.exports = function(grunt) {
                         expand: true,
                         nonull: true,
                         flatten: true,
-                        src: ['public/bower/blueimp-gallery/css/blueimp-gallery*.css',
-                      'public/bower/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery*.css'
-                      ],
+                        src: [
+                            'public/bower/bootstrap/dist/css/bootstrap*.css',
+                            'public/bower/bootstrap/dist/css/bootstrap*.map',
+                            'public/bower/magnific-popup/dist/*.css',
+                            'public/bower/blueimp-gallery/css/blueimp-gallery*.css',
+                            'public/bower/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery*.css'
+                        ],
                         dest: 'public/css/',
                         filter: 'isFile'
               },

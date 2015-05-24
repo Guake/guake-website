@@ -7,6 +7,7 @@
     "grunt": "~0.4.5",
     "ScrollMagic": "~2.0.5",
     "jquery": "~2.1.4",
-    "bootstrap-lightbox": "~0.7.0"
+    "bootstrap-lightbox": "~0.7.0",
+    "magnific-popup": "~1.0.0"
   }
 }

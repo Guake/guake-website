@@ -26,27 +26,38 @@ $(document).ready ->
 # $( window ).load ->
     #$('nav').localScroll(800);
     # Recalculate for parallax
-    RepositionNav()
-    $(window).resize ->
-       RepositionNav()
-       return
+    #RepositionNav()
+    #$(window).resize ->
+    #   RepositionNav()
+    #   return
 
 
     # blueimp.Gallery(
-    blueimp.Gallery(
-        # [
-        #     {
-        #         title: 'Banana',
-        #         href: '../img/intro.jpg',
-        #         type: 'image/jpeg',
-        #     }
-        # ],
-        document.getElementById('links').getElementsByTagName('a'),
-        {
-            container: '#blueimp-gallery',
-            carousel: true
+    #blueimp.Gallery(
+    #    # [
+    #    #     {
+    #    #         title: 'Banana',
+    #    #         href: '../img/intro.jpg',
+    #    #         type: 'image/jpeg',
+    #    #     }
+    #    # ],
+    #    document.getElementById('links').getElementsByTagName('a'),
+    #    {
+    #        container: '#blueimp-gallery',
+    #        carousel: true
+    #    }
+    #)
+    $('.test-popup-link').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-with-zoom',
+        zoom: {
+            enabled: true,
+            duration: 300,
+            easing: 'ease-in-out',
+            opener: (openerElement) ->
+                openerElement.find('img')
         }
-    )
+    })
     return
 
     # blueimp.Gallery([

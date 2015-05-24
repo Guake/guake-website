@@ -5,6 +5,7 @@ html
         block head
 
             meta(charset='utf8')
+            meta(name="viewport" content="width=device-width, initial-scale=1")
 
             title Guake Terminal
 
@@ -14,20 +15,24 @@ html
             link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Montserrat:400,700')
             link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic")
 
-            link(rel='stylesheet', href='css/guake.css')
+            link(rel="stylesheet", href="css/bootstrap.min.css")
             link(rel="stylesheet", href="css/blueimp-gallery.css")
             link(rel="stylesheet", href="css/bootstrap-image-gallery.css")
             link(rel="stylesheet", href="css/bootstrap-lightbox.css")
+            link(rel="stylesheet", href="css/magnific-popup.css")
+
+            link(rel='stylesheet', href='css/guake.css')
 
             script(src='js/jquery.min.js')
             script(src='js/bootstrap.js')
-            script(src='js/jquery.scrollTo-1.4.3.1.min.js')
+            //- script(src='js/jquery.scrollTo-1.4.3.1.min.js')
             script(src='js/jquery.easing.1.3.js')
-            script(src='js/jquery.parallax-1.1.js')
-            script(src="js/ScrollMagic.js")
-            script(src="js/jquery.ScrollMagic.js")
+            //- script(src='js/jquery.parallax-1.1.js')
+            //- script(src="js/ScrollMagic.js")
+            //- script(src="js/jquery.ScrollMagic.js")
             script(src='js/modernizr-custom.js')
             script(src='js/bootstrap-lightbox.js')
+            script(src='js/jquery.magnific-popup.min.js')
 
         block body
 
@@ -45,9 +50,8 @@ html
                 block content
 
                 block footer
-
                     include ../includes/footer
 
-                script(src='js/guake.js')
                 script(src='js/blueimp-gallery.js')
                 script(src='js/bootstrap-image-gallery.js')
+                script(src='js/guake.js')

@@ -66,7 +66,6 @@ block content
                     a.btn.btn-circle(href='#firstlook')
                         i.fa.fa-angle-double-down.animated
 
-
     section#firstlook.slide
         .container
             .row
@@ -76,6 +75,8 @@ block content
                         | How does Guake look like?
 
             .row
+
+
                 .col-md-12.col-xs-8.col-xs-offset-2.col-md-offset-0
                     .row.animate-build(data-animation="fade-in" data-build="2")
                         .col-xs-12.col-md-offset-1.col-md-5
@@ -86,24 +87,11 @@ block content
                             //-     | Guake appears automatically when you press your magic shortcut. It restores
                             //-     | the focus to your application immediately when your repress this shortcut.
 
-                            //- a.btn(data-toggle="modal", href="#myModal") Launch
-                            //- .modal.hide#myModal
-                            //-     .modal-header
-                            //-         button(type="button", class="close", data-dismiss="modal") x
-                            //-         h3 Modal Header
-                            //-     .modal-body
-                            //-         p One fine body...
-                            //-     .modal-footer
 
                         .col-xs-12.col-md-5
-                            a(data-toggle="lightbox" href="#demoLightbox")
-                                img.img-screenshot(src="img/screenshot-main.gif")
-                            #demoLightbox.lightbox.hide.fade(tabindex="-1" role="dialog" aria-hidden="true")
-                                .lightbox-dialog
-                                    .lightbox-content
-                                        img(src="img/screenshot-main.gif")
-                                        .lightbox-caption
-                                            Your caption here
+                            a.test-popup-link(href="img/screenshot.png")
+                               img(src="img/screenshot-tb.png")
+
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="3")
                     #firstlook-hook
@@ -169,7 +157,7 @@ block content
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="11")
                     #more-hook
-                    a.btn.btn-circle(href='#get')
+                    a.btn.btn-circle(href='#screenshots')
                         i.fa.fa-angle-double-down.animated
 
     section#screenshots.slide
@@ -199,7 +187,7 @@ block content
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="2")
                     #screenshot-hook
-                    a.btn.btn-circle(href='#sources')
+                    a.btn.btn-circle(href='#get')
                         i.fa.fa-angle-double-down.animated
 
 
@@ -230,7 +218,7 @@ block content
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="5")
                     #get-hook
-                    a.btn.btn-circle(href='#screenshots')
+                    a.btn.btn-circle(href='#sources')
                         i.fa.fa-angle-double-down.animated
 
     section#sources.slide
