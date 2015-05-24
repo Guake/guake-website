@@ -59,7 +59,7 @@ $(document).ready ->
                     openerElement
                 else
                     openerElement.find('img');
-        }
+            }
     })
     return
 
