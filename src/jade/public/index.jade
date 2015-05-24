@@ -157,45 +157,39 @@ block content
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="11")
                     #more-hook
-                    a.btn.btn-circle(href='#screenshots')
+                    a.btn.btn-circle(href='#sources')
                         i.fa.fa-angle-double-down.animated
 
-    section#screenshots.slide
-        .container
-            .row
+     //- section#screenshots.slide
+     //-     .container
+     //-        .row
+     //-            .col-lg-8.col-lg-offset-2
+     //-                h1.animate-in(data-animation="space-in" data-build="1")
+     //-                    | See Guake in Action
+     //-                .animate-build(data-animation="fade-in" data-build="2")
+     //-                    #blueimp-gallery.blueimp-gallery.blueimp-gallery-carousel
+     //-                        .slides
+     //-                        h3.title
+     //-                        a.prev
+     //-                        a.next
+     //-                        a.play-pause
+     //-                        ol.indicator
+     //-                    #links.links
+     //-                        a(href="http://farm6.static.flickr.com/5101/13539971585_6c655628e5_b.jpg" title="La finestra" type="image/jpeg" data-gallery="")
+     //-                        a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
+     //-                        a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
+     //-                        a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
+
+     //-        .row
+     //-            .page-scroll.animate-build(data-animation="fade-in" data-build="2")
+     //-                #screenshot-hook
+     //-                a.btn.btn-circle(href='#sources')
+     //-                    i.fa.fa-angle-double-down.animated
+
+    section#sources.slide
+        .download-section
+            .container
                 .col-lg-8.col-lg-offset-2
-
-                    h1.animate-in(data-animation="space-in" data-build="1")
-                        | See Guake in Action
-
-                    //- <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-                    .animate-build(data-animation="fade-in" data-build="2")
-                        //- <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-                        #blueimp-gallery.blueimp-gallery.blueimp-gallery-carousel
-                            .slides
-                            h3.title
-                            a.prev
-                            a.next
-                            a.play-pause
-                            ol.indicator
-                        #links.links
-                            a(href="http://farm6.static.flickr.com/5101/13539971585_6c655628e5_b.jpg" title="La finestra" type="image/jpeg" data-gallery="")
-                            a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
-                            a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
-                            a(href="img/screenshot.png" title="Banana" type="image/jpeg" data-gallery)
-
-            .row
-                .page-scroll.animate-build(data-animation="fade-in" data-build="2")
-                    #screenshot-hook
-                    a.btn.btn-circle(href='#get')
-                        i.fa.fa-angle-double-down.animated
-
-
-    section#get.slide
-        .container
-            .row
-                .col-lg-8.col-lg-offset-2
-
                     h1.animate-in(data-animation="space-in" data-build="1")
                         | How can I get Guake?
 
@@ -215,18 +209,7 @@ block content
                         | <a href="https://github.com/Guake/guake/issues">the Issues
                         | page of the GitHub project</a>.
 
-            .row
-                .page-scroll.animate-build(data-animation="fade-in" data-build="5")
-                    #get-hook
-                    a.btn.btn-circle(href='#sources')
-                        i.fa.fa-angle-double-down.animated
-
-    section#sources.slide
-        .download-section
-            .container
-                .col-lg-8.col-lg-offset-2
-                    h1 Compile Guake from sources
-                    p
+                    p.animate-build(data-animation="fade-in" data-build="5")
                         | General information on how to compile guake can be found in the
                         | <a href="https://github.com/Guake/guake/blob/master/README.rst">
                         | README.rst</a> file.

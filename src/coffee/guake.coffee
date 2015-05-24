@@ -55,7 +55,10 @@ $(document).ready ->
             duration: 300,
             easing: 'ease-in-out',
             opener: (openerElement) ->
-                openerElement.find('img')
+                if (openerElement.is('img'))
+                    openerElement
+                else
+                    openerElement.find('img');
         }
     })
     return
