@@ -13,8 +13,8 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'public/bower/angular/angular.js',
-            'public/bower/angular-mocks/angular-mocks.js',
+            'bower/angular/angular.js',
+            'bower/angular-mocks/angular-mocks.js',
             'public/js/guake.js',
             'src/js/test/unit/**/*.js'
         ],
@@ -71,4 +71,3 @@ module.exports = function(config) {
 
     });
 };
-
