@@ -57,9 +57,9 @@ block content
                         | terminal used in Quake <i class="glyphicon glyphicon-copyright-mark"></i>.
 
                     p.animate-build(data-animation="fade-in" data-build="2")
-                        | You instantenously show and hide your terminal with a single key stroke,
-                        | execute a command, and then go back to your previous task without breaking your
-                        | workflow.
+                        | You can instantenously show and hide your terminal with a single key
+                        | stroke, execute a command, and then go back to your previous task
+                        | without breaking your workflow.
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="3")
                     #what-hook
@@ -75,22 +75,26 @@ block content
                         | How does Guake look like?
 
             .row
-
-
                 .col-md-12.col-xs-8.col-xs-offset-2.col-md-offset-0
                     .row.animate-build(data-animation="fade-in" data-build="2")
                         .col-xs-12.col-md-offset-1.col-md-5
                             p.screenshot-legend
                                 | Your Terminal Anywhere On Your Desktop, Just A Shortcut Away!
 
-                            //- p.screenshot-description
-                            //-     | Guake appears automatically when you press your magic shortcut. It restores
-                            //-     | the focus to your application immediately when your repress this shortcut.
-
+                            p.screenshot-description
+                                | Imagine you are working in your favorite text editor and want to
+                                | execute some commands, like execute the unit test of your code,
+                                | check a man page, or edit some configuration file. You can do it
+                                | at lightning speed without leaving your keyboard. Just press your
+                                | predefined "Show Guake" hotkey, execute your command, and repress
+                                | it to hide the terminal and go back to your work.
 
                         .col-xs-12.col-md-5
-                            a.test-popup-link(href="img/screenshot.png")
+                            a.screenshot-link(href="img/screenshot.png")
                                img(src="img/screenshot-tb.png")
+                            br
+                            a.screenshot-link(href="img/screenshot2.jpg")
+                               img(src="img/screenshot2-tb.jpg")
 
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="3")
@@ -105,55 +109,49 @@ block content
                     h1.animate-in(data-animation="space-in" data-build="1")#scale-animation
                         | Tell me More!
             .row.feature-list
-                //- .col-lg-8.col-lg-offset-2#scale-trigger
-
-                //-     ul.feature-ul
-                //-         li.animate-build(data-animation="fade-in" data-build="2")
-                //-             | Simple Easy, Elegant and Smooth integration of terminal into GNOME
-                //-         li.animate-build(data-animation="fade-in" data-build="3")
-                //-             | Compiz transparency support
-                //-         li.animate-build(data-animation="fade-in" data-build="4")
-                //-             | Plenty of color palette
-                //-         li.animate-build(data-animation="fade-in" data-build="5")
-                //-             | Quick Open file path in your favorite text editor
-                //-         li.animate-build(data-animation="fade-in" data-build="6")
-                //-             | Customizable hotkeys for almost every action
-                //-         li.animate-build(data-animation="fade-in" data-build="7")
-                //-             | Configure your Tabs at Startup
-                //-         li.animate-build(data-animation="fade-in" data-build="8")
-                //-             | Multi-monitor support
-                //-         li.animate-build(data-animation="fade-in" data-build="9")
-                //-             | Save terminal content to file
-                //-         li.animate-build(data-animation="fade-in" data-build="10")
-                //-             | Open URL to your browser
-                .col-xs-6.col-md-4
+                .col-xs-12.col-sm-4
                     h3 Simple Easy, Elegant
-                    p Smooth integration of terminal into GNOME, with Compiz Transparency
-                .col-xs-6.col-md-4
-                    h3 Multi Tabs
-                    p Get instant access to your tabs with custom shortcut
-                .col-xs-6.col-md-4
+                    p
+                        | Smooth integration of the terminal into the GNOME environment, with
+                        | Compiz Transparency and show animation.
+
+                .col-xs-12.col-sm-4
                     h3 Multi Multi-monitor
-                    p Open Guake on the monitor where your mouse is, or in a specific monitor
-                .col-xs-6.col-md-4
+                    p
+                        | Guake supports Multimonitor setup. Open it on the monitor where your
+                        | mouse is, or in a dedicated screen.
+
+                .col-xs-12.col-sm-4
+                    h3 Multi Tabs
+                    p
+                        | Use Several named tabs, with names automatically set from the running
+                        | command, or easilly customized.
+                    p
+                        | Get instant access to your tabs with custom shortcut.
+
+            .row.feature-list
+                .col-xs-12.col-sm-4
                     h3 Quick Open
                     p
-                        | See a filename in your terminal output? Simply click on it and it can
-                        | be opened directly if your favorite Text Editor. Even at the line and
-                        | colunm number if your editor support it.
-                .col-xs-6.col-md-4
+                        | See a filename in your terminal output? Simply click on it and it will be
+                        | opened directly in your favorite Text Editor. It can even be scroll at
+                        | the very specific line and colunm if your editor support it!
+
+                .col-xs-12.col-sm-4
                     h3 Autoconfigure Guake
                     p
-                        | Start Guake automatically at startup, and define a script that will be
+                        | Start Guake automatically at login, and define a script that will be
                         | executed on Guake launch, in order to configure Guake tabs.
                     p
-                        | This is temporary solution waiting for the save session feature.
+                        | This is temporary solution waiting for the
+                        | <a href="https://github.com/Guake/guake/issues/71">save session feature</a>.
 
-                .col-xs-6.col-md-4
-                    h3 Plenty of Color palette
+                .col-xs-12.col-sm-4
+                    h3 Plenty of Color palettes
                     p
                         | More than 130 predefined palettes are provided! You can easilly visualize
-                        | it prior to choosing the color that is best for you.
+                        | them prior to choosing the color that is best for you.
+
             .row
                 .page-scroll.animate-build(data-animation="fade-in" data-build="11")
                     #more-hook
@@ -213,6 +211,14 @@ block content
                         | General information on how to compile guake can be found in the
                         | <a href="https://github.com/Guake/guake/blob/master/README.rst">
                         | README.rst</a> file.
+
+                    h1.animate-in(data-animation="space-in" data-build="6")
+                        | Can I contribute?
+
+                    p.animate-build(data-animation="fade-in" data-build="6")
+                        | Want a feature for Guake? Contributions are welcomed! Guake is mainly
+                        | developed in the Python language, and use the GTK-2 binding.
+                        | Don't hesitate to submit your Pull Request!
 
                     ul.list-inline.banner-social-buttons
                         li

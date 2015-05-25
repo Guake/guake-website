@@ -605,13 +605,30 @@ body {
 }
 
 .screenshot-description{
-    font-size: 0.6em;
+    font-size: 0.5em;
     font-weight: normal;
 }
 
+.container-triptic{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-width: 768px) {
-    .container {
-        width: 100%;
+    .container-triptic {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-triptic {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-triptic {
+        width: 1170px;
     }
 }
 
@@ -637,8 +654,13 @@ body {
     }
 }
 
-img.img-icon{
+.img-icon{
     display: inline !important;
     width: 22px;
     margin-right: 10px;
+}
+
+a.screenshot-link img{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

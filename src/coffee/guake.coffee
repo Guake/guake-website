@@ -47,7 +47,7 @@ $(document).ready ->
     #        carousel: true
     #    }
     #)
-    $('.test-popup-link').magnificPopup({
+    $('.screenshot-link').magnificPopup({
         type: 'image',
         mainClass: 'mfp-with-zoom',
         zoom: {
@@ -61,7 +61,6 @@ $(document).ready ->
                     openerElement.find('img');
             }
     })
-    return
 
     # blueimp.Gallery([
     #         {
