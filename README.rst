@@ -42,7 +42,8 @@ Main building tools
   in your website, such as ``angular``, ``jquery``, ``bootstrap``,...
 - ``grunt`` is the build tool. Basically it is just a task manager, like Makefile or Ant. There is
   use set of plugins available to perform many operations. Grunt will compile your source files into
-  testable website and will prepare the file for the release package.
+  testable website and will prepare the file for the release package. Its main competitor is
+  ``gulp``, which is more easier to use, faster and mode "npm"-like.
 
 More information
 ----------------
