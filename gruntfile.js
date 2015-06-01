@@ -193,7 +193,7 @@ module.exports = function(grunt) {
                         expand: true,
                         nonull: true,
                         flatten: true,
-                        src: ['src/img/favicon.ico'],
+                        src: ['src/img/favicon.ico', 'src/img/favicon.png'],
                         dest: 'public/',
                         filter: 'isFile'
                     },
