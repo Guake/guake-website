@@ -1,4 +1,4 @@
-start /B npm update
-start /B bower update
+start /B npm update --save
+start /B bower update --save
 
 pause

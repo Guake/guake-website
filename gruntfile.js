@@ -55,8 +55,9 @@ module.exports = function(grunt) {
                     console: true,
                     module: true,
                     document: true,
-                    angular: false
+                    angular: false,
                 },
+                reporterOutput: '',
                 globalstrict: false
             }
         },
