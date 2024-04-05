@@ -5,6 +5,7 @@
     "grunt-sitemap": "~2.0.1"
   },
   "devDependencies": {
+    "bower": "^1.8.14",
     "grunt": "~1.6.1",
     "grunt-contrib-coffee": "~2.1.0",
     "grunt-contrib-concat": "~2.1.0",
