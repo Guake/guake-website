@@ -5,7 +5,7 @@ Guake Web site source
 
 This repository contains the source code of the Guake web site:
 
-    http://guake-project.org
+    https://guake.github.io
 
 Introduction
 ============

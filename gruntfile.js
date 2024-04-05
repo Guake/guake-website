@@ -282,8 +282,8 @@ module.exports = function(grunt) {
         sitemap: {
             dist: {
                 siteRoot: 'public/',
-                homepage: 'http://www.guake-project.org',
-                pattern: '/*.html',
+                homepage: 'http://guake.github.io',
+                changefreq: 'yearly',
             },
         }
     });
