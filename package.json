@@ -1,22 +1,25 @@
 {
   "name": "guake-terminal-website",
   "version": "1.0.0",
-  "dependencies": {
-    "grunt-sitemap": "~1.1.0"
+  "scripts": {
+    "clean": "rimraf bower public",
+    "build": "bower install && grunt build"
   },
   "devDependencies": {
-    "bootstrap": "~3.4.1",
-    "grunt": "~0.4.5",
-    "grunt-contrib-coffee": "~0.12.0",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-connect": "~0.8.0",
-    "grunt-contrib-copy": "~0.7.0",
-    "grunt-contrib-jade": "~0.13.0",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-less": "~0.11.4",
-    "grunt-contrib-uglify": "~0.6.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-modernizr": "~0.6.0"
+    "bower": "^1.8.14",
+    "grunt": "~1.6.1",
+    "grunt-contrib-coffee": "~2.1.0",
+    "grunt-contrib-concat": "~2.1.0",
+    "grunt-contrib-connect": "~4.0.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-jade": "~1.0.0",
+    "grunt-contrib-jshint": "~3.2.0",
+    "grunt-contrib-less": "~3.0.0",
+    "grunt-contrib-uglify": "~5.2.2",
+    "grunt-contrib-watch": "~1.1.0",
+    "grunt-modernizr": "~4.0.1",
+    "grunt-sitemap": "~2.0.1",
+    "rimraf": "^5.0.5"
   },
   "engines": {
     "node": ">=0.8.0"
