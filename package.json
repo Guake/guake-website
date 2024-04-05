@@ -1,6 +1,10 @@
 {
   "name": "guake-terminal-website",
   "version": "1.0.0",
+  "scripts": {
+    "clean": "rimraf bower public",
+    "build": "bower install && grunt build"
+  },
   "devDependencies": {
     "bower": "^1.8.14",
     "grunt": "~1.6.1",
@@ -14,7 +18,8 @@
     "grunt-contrib-uglify": "~5.2.2",
     "grunt-contrib-watch": "~1.1.0",
     "grunt-modernizr": "~4.0.1",
-    "grunt-sitemap": "~2.0.1"
+    "grunt-sitemap": "~2.0.1",
+    "rimraf": "^5.0.5"
   },
   "engines": {
     "node": ">=0.8.0"
